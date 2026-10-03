@@ -29,3 +29,11 @@ Använder clamp(1rem, 2rem, 2.5rem) på nav p för responsivitet. 1rem blir mins
 Använder grid och grid-area på main för att lättare sätta varsin sektion i sin egen plats
 
 Använder div för att sätta tjänster i boxes 
+
+I funktionen getTime variablerna som hämtat timmar, minuter och sekunder måste vara en string för att få padStart att funka, så jag läggde dem i en String().
+padStart(2, "0") gör så att om det finns mindre tecken än 2 -> lägga till "0"
+Samma för getDate
+
+If satsen för isOpenedOrClosed kör så här "Om dagen är från 1-5 och tiden är från 7 till 18" -> Skriv över #open-close till open
+"Om dagen är 6 och tiden är mellan 9 och 14 skriv över #open-close till open" Annars står det Ständgt. Ingen if sats för söndag eftersom tassen är ständgt 
+
