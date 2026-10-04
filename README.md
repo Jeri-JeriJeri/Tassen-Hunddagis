@@ -37,4 +37,5 @@ Samma för getDate
 If satsen för isOpenedOrClosed kör så här "Om dagen är från 1-5 och tiden är från 7 till 18" -> Skriv över #open-close till open
 "Om dagen är 6 och tiden är mellan 9 och 14 skriv över #open-close till open" Annars står det Ständgt. Ingen if sats för söndag eftersom tassen är ständgt 
 
-Bokningsförfrågan kommer vara en form. Javascript kommer hämta hundens namn och datumet och spara den via localStorage.
+Bokningsförfrågan kommer vara en form. JavaScript kommer hämta hundens namn och datumet och spara den via localStorage.
+Kunderna kommer sitta i sitt eget JSON fil för att inte ta upp onödig plats i JavaScript filen 
