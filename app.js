@@ -44,4 +44,23 @@ setInterval(getDate, 1000);
 setInterval(isOpenedOrClosed, 1000)
 setInterval(getTime, 1000);
 
+// BOKNINGEN
+const hundNamn = document.getElementById("namn");
+const bokningDatum = document.getElementById("datum");
 
+const formBook = document.getElementById("bokning-form");
+const btnBook = document.getElementById("bokning-btn");
+
+let bokningar = [];
+document.addEventListener("DOMContentLoaded", (e) => {
+    loadLocalStorage();
+})
+function loadLocalStorage() {} // local storage ska loades här
+
+function addLocalStorage() {} // funktion för att lägga items till bokningar
+
+function printLocalStorage () {} // DOM som kommer visas på webbsidan (bokningen)
+formBook.addEventListener("submit", (e) => {
+e.preventDefault();
+console.log("hej")
+})

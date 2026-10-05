@@ -38,3 +38,7 @@ If satsen för isOpenedOrClosed kör så här "Om dagen är från 1-5 och tiden 
 "Om dagen är 6 och tiden är mellan 9 och 14 skriv över #open-close till open" Annars står det Ständgt. Ingen if sats för söndag eftersom tassen är ständgt 
 
 Bokningsförfrågan kommer vara en form. Javascript kommer hämta hundens namn och datumet och spara den via localStorage.
+
+Jag använde DOMContentLoaded och loadLocalStorage() på document event listener för att vänta tills HTML är laddad för att visa items som är sparade i localStorage. 
+
+addlocalStorage() kommer lägga spara till webbläsaren, printLocalStorage() kommer kontrollera DOM (inputen kommer skrivs ut på webbsidan). 
