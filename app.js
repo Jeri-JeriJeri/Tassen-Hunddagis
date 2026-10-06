@@ -99,3 +99,8 @@ const b = document.getElementById("btn")
 b.addEventListener("click", () => {
     localStorage.clear()
 })
+// RECENSIONER
+const recension = document.getElementById("recension-text")
+const recensionNamn = document.getElementById("recension-person")
+const recensionOmdome = document.getElementById("recension-rating")
+
