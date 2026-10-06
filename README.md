@@ -37,4 +37,21 @@ Samma för getDate
 If satsen för isOpenedOrClosed kör så här "Om dagen är från 1-5 och tiden är från 7 till 18" -> Skriv över #open-close till open
 "Om dagen är 6 och tiden är mellan 9 och 14 skriv över #open-close till open" Annars står det Ständgt. Ingen if sats för söndag eftersom tassen är ständgt 
 
+# Bokningsförfrågan 
 Bokningsförfrågan kommer vara en form. Javascript kommer hämta hundens namn och datumet och spara den via localStorage.
+
+# addLocalStorage:
+ Först hämtar datan från de 2 inputs. Sen sparas de i ett objekt (bokning) och de läggs till arrayen bokningar via .push(). Efter det sparas arrayen till localStorage och använde jag JSON.stringify() så att man kan läsa det som sparades. Sedan körs loadLocalStorage() så att listan uppdateras i real-time. 
+
+# loadLocalStorage: 
+Skapade varibeln sparadeBokningar som hämtar sparade items. If satsen kör om nånting finns i variabeln. Om ja skickas localStorage items som ett objekt
+
+Annars listan kommer vara tomt
+
+# forEach 
+För varje bokningar item skapas en li element med value av hundensNamn och Datumet. Och sist läggs li elementet som barn till ul elementet
+
+
+Jag använde DOMContentLoaded och loadLocalStorage() på document.addEventListener för att visa items som är sparade i localStorage när sidan laddas. 
+
+
