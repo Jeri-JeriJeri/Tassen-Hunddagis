@@ -100,14 +100,17 @@
             <p>Fyll in hundens namn och önskat datum</p>
             <p>Din förfrågan sparas i din webbläsare, vi ringer upp dig</p>
             <form class="bokning-form" id="bokning-form">
-                <label for="namn">Hundens Namn:</label>
-                <input type="text" id="namn" name="namn" required>
-                <label for="datum">Önskat datum</label>
-                <input type="date" id="datum" name="datum" required>
+                <label for="bokat-namn">Hundens Namn:</label>
+                <input type="text" id="bokat-namn" name="namn" required>
+                <label for="bokat-datum">Önskat datum</label>
+                <input type="date" id="bokat-datum" name="datum" required>
                 <button id="bokning-btn">Boka</button>
             </form>
             <h3>Dina Bokningar:</h3>
-            <p class="bokning-sparade" id="bokning-sparade"></p>
+            <ul class="bokning-sparade" id="bokning-sparade">
+
+
+            </ul>
         </section>
         <section id="omdomen" class="omdomen">
 
@@ -120,6 +123,7 @@
         <p>&copy; Tassen</p>
     </footer>
 
+<button id="btn">clear</button>
     <script src="app.js" defer></script>
 </body>
 </html>

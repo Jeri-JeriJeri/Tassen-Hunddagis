@@ -45,22 +45,57 @@ setInterval(isOpenedOrClosed, 1000)
 setInterval(getTime, 1000);
 
 // BOKNINGEN
-const hundNamn = document.getElementById("namn");
-const bokningDatum = document.getElementById("datum");
-
 const formBook = document.getElementById("bokning-form");
-const btnBook = document.getElementById("bokning-btn");
+const listContainer = document.getElementById("bokning-sparade")
+const hundNamn = document.getElementById("bokat-namn")
+const bokatDatum = document.getElementById("bokat-datum")
 
 let bokningar = [];
+
+function addLocalStorage() {
+    const namn = hundNamn.value
+    const datum = bokatDatum.value;
+
+    const bokning = {
+        namn: namn,
+        datum: datum
+    }
+
+    bokningar.push(bokning)
+    localStorage.setItem("bokningar", JSON.stringify(bokningar))
+
+    loadLocalStorage();
+    }
+
+function loadLocalStorage() {
+    const sparadeBokningar = localStorage.getItem("bokningar");
+
+    if (sparadeBokningar) {
+        bokningar = JSON.parse(sparadeBokningar)
+    }
+
+    listContainer.innerHTML = "";
+   
+    bokningar.forEach( (bokning) => {
+        const li = document.createElement("li")
+        li.textContent = bokning.namn + " - " + bokning.datum
+
+        listContainer.appendChild(li)
+    })
+    
+} 
+
 document.addEventListener("DOMContentLoaded", (e) => {
     loadLocalStorage();
 })
-function loadLocalStorage() {} // local storage ska loades här
 
-function addLocalStorage() {} // funktion för att lägga items till bokningar
-
-function printLocalStorage () {} // DOM som kommer visas på webbsidan (bokningen)
 formBook.addEventListener("submit", (e) => {
 e.preventDefault();
-console.log("hej")
+addLocalStorage();
+console.log(bokatDatum.value)
+})
+const b = document.getElementById("btn")
+
+b.addEventListener("click", () => {
+    localStorage.clear()
 })
