@@ -94,22 +94,47 @@
                     <td>Hundskötare och ägare</td>
                 </tr>
             </table>
+            <section id="omdomen" class="omdomen">
+                <h2>Recensioner</h2>
+                <p>Några ord från hundägare som har haft sina hundar hos oss:</p>
+                <div class="recensioner-container">
+                    <p id="recension-text">"Recension"</p>
+                    <p id="recension-person">Liam</p>
+                    <p id="recension-rating">4/5</p>
+                    <button type="button">Visa ett annat omdöme</button>
+                </div>
+    
+            </section>
         </section>
+
         <section id="boka" class="boka">
             <h2>Skicka en Bokningsförfrågan</h2>
             <p>Fyll in hundens namn och önskat datum</p>
-            <p>Vi ringer upp dig</p>
-            <form class="bokning-form">
-                <label for="namn">Hundens Namn:</label>
-                <input type="text" id="namn" name="namn" required>
-                <label for="datum">Önskat datum</label>
-                <input type="date" id="datum" name="datum" required>
-                <button>Boka</button>
+            <p>Din förfrågan sparas i din webbläsare, vi ringer upp dig</p>
+            <form class="bokning-form" id="bokning-form">
+                <label for="bokat-namn">Hundens Namn:</label>
+                <input type="text" id="bokat-namn" name="namn" required>
+                <label for="bokat-datum">Önskat datum</label>
+                <input type="date" id="bokat-datum" name="datum" required>
+                <button id="bokning-btn">Boka</button>
             </form>
             <h3>Dina Bokningar:</h3>
             
         </section>
         <section id="omdomen" class="omdomen">
+        </section>
+        <ul class="bokning-sparade" id="bokning-sparade">
+            
+            
+        </ul>
+    </section>
+    
+</main>
+    <footer class="footer-section">
+        
+        
+        <section class="footer-logga">
+            <p>&copy; Tassen</p>
         </section>
         <section id="kontakt" class="kontakt">
             <h2>Kontakta Oss</h2>
@@ -121,11 +146,10 @@
             <h3>E-post</h3>
             <a href="mailto:hej@tassen.se"><p>hej@tassen.se</p></a>
         </section>
-    </main>
-    <footer>
-        <p>&copy; Tassen</p>
+        
     </footer>
 
+<button id="btn">clear</button>
     <script src="app.js" defer></script>
 </body>
 </html>

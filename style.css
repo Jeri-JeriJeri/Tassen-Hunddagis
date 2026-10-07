@@ -45,8 +45,7 @@ main {
     "tjanster tjanster tjanster"
     "opettider opettider opettider"
     "omdomen omdomen omdomen"
-    "boka boka kontakt"
-    "footer footer footer"
+    "boka boka boka"
     ;
 }
 .start {
@@ -61,13 +60,20 @@ main {
 .boka {
     grid-area: boka;
 }
+
+footer {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        grid-template-areas: "logga kontakt";
+        grid-area: footer;
+    }
+.footer-logga {
+    grid-area: logga;
+}
 .kontakt {
     grid-area: kontakt;
 }
-footer {
-    grid-area: footer;
-}
-/* Styling av #start */
+    /* Styling av #start */
 
 
 #datum {
