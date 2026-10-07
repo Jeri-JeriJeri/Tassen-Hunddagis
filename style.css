@@ -55,7 +55,26 @@ main {
 }
 .start {
     grid-area: start ;
-    background: #f0ede5;
+    position: relative;
+}
+#bakgrundVideo {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    
+}
+.start h1, p, span {
+    position: relative;
+    z-index: 1;
+    color: #F6f4ef;
+
+}
+.start p {
+    margin-bottom: 4rem;
+
 }
 .tjanster {
     grid-area: tjanster;
