@@ -8,10 +8,11 @@ body {
 }
 
 /* HEADER OCH NAV */
-header {
+header, footer{
     position: sticky;
     top: 0;
     padding-bottom: 1rem;
+    background-color: #474C80;
 }
 nav {
     display: flex;
@@ -19,10 +20,15 @@ nav {
     
     
 }
-nav p {
+header a, footer {
+    color: #F8F7E2;
+
+}
+header p {
     font-size: clamp(1rem, 2rem, 2.5rem);
     margin: 0;
     color: black;
+    width: max-content;
 }
 nav li {
     display: inline;
@@ -39,7 +45,6 @@ a:hover {
 main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    
     grid-template-areas: 
     "start start start"
     "tjanster tjanster tjanster"
@@ -50,15 +55,38 @@ main {
 }
 .start {
     grid-area: start ;
+    position: relative;
+}
+#bakgrundVideo {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    
+}
+.start h1, p, span {
+    position: relative;
+    z-index: 1;
+    color: #F6f4ef;
+
+}
+.start p {
+    margin-bottom: 4rem;
+
 }
 .tjanster {
     grid-area: tjanster;
+    background: #F6f4ef;
 }
 .opettider {
     grid-area: opettider;
+    background: #f0ede5;
 }
 .boka {
     grid-area: boka;
+    background: #F6f4ef;
 }
 
 footer {
@@ -66,6 +94,7 @@ footer {
         grid-template-columns: max-content 1fr;
         grid-template-areas: "logga kontakt";
         grid-area: footer;
+        gap: 0 1rem;
     }
 .footer-logga {
     grid-area: logga;
