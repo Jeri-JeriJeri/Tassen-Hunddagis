@@ -5,6 +5,8 @@
 }
 body {
     margin: 0;
+    font-family: Georgia, serif;
+    color: #282C35;
 }
 
 /* HEADER OCH NAV */
@@ -114,7 +116,6 @@ h1 {
 }
 .open span {
     background: #F6f4ef;
-    color: #282C35;
     font-size: 2rem;
     border: 1px solid black;
     padding:1rem;
@@ -125,6 +126,31 @@ h1 {
 .tjanster {
     grid-area: tjanster;
     background: #F6f4ef;
+    margin: 0 1rem;
+}
+.heldag, .halvdag, .pensionat, .klippkort, .hamta-lamna {
+    background: #f0ede5;
+    border: 1px solid black;
+    padding:1rem;
+    border-radius: 6px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 2);
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    
+}
+.pris {
+    font-size: 1.5rem;
+    background: #F6f4ef;
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: 24px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 2);
+
+    
 }
 .opettider {
     grid-area: opettider;
