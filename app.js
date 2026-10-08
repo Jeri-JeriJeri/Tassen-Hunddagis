@@ -60,7 +60,7 @@ function addLocalStorage() {
         namn: namn,
         datum: datum
     }
-
+    
     bokningar.push(bokning)
     localStorage.setItem("bokningar", JSON.stringify(bokningar))
 
@@ -83,7 +83,9 @@ function loadLocalStorage() {
         btn.textContent = "Avboka"
 
         btn.addEventListener("click", () => {
+            // Remove item
             li.remove();
+            btn.remove();
             
         })
         listContainer.appendChild(li)
