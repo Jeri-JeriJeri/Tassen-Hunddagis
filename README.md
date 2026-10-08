@@ -58,6 +58,9 @@ Jag använde DOMContentLoaded och loadLocalStorage() på document.addEventListen
 ## .start
 Jag använde position relative så att jag kan sätta position absolute på videon. Och position absoloute med hjälp av z-index hjälper mig sätta videon som bakgrund. Och för att få texten och rubriken att visas, körde jag z-index 1 på dem. Och sist object-fit: cover; för att få den exakt bredd och lång som .start
 
+## Recensioner
+Recensionerna sitter i ett array som innehåller objekt.
+Jag använde event listener som kollar på variabeln i. Varje gång man trycker, i.värden skrivs ut i HTML och sen kör +1 i arrayen för att hoppa till nästa person. Och det finns 3 i.värde som är namn, recension och rating
 ### AI använding:
 Jag använde ai för object-cover
 
