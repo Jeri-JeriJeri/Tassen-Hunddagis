@@ -10,8 +10,8 @@
     "rating": 6
   },
   {
-    "namn": "Sofia",
-    "recensionen": "Tyvärr blev jag besviken. Servicen var långsam och upplevelsen levde inte upp till mina förväntningar.",
-    "rating": 3
+   "namn": "Kim",
+    "recension": "En riktigt engagerande och mysig bok som fångade mitt intresse från första sidan. Karaktärerna kändes äkta och miljöerna var otroligt fint beskrivna. Det enda minuset var att slutet kändes lite förhastat, men helhetsupplevelsen är helt klart värd en stark rekommendation!",
+    "rating": "8/10"
   }
 ]

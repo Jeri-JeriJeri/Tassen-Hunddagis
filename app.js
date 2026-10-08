@@ -105,3 +105,23 @@ const recensionNamn = document.getElementById("recension-person")
 const recensionOmdome = document.getElementById("recension-rating")
 
 // Dropdown Menu
+
+// Recension fetcher
+const jsonRecensioner = [
+    {
+        "namn": "Anna",
+    "recensionen": "Mycket bra upplevelse! Jag är riktigt nöjd och kommer gärna tillbaka.",
+    "rating": 9
+},
+{
+    "namn": "Erik",
+    "recensionen": "Helt okej, men det finns några saker som skulle kunna förbättras.",
+    "rating": 6
+},
+{
+    "namn": "Kim",
+    "recension": "En riktigt engagerande och mysig bok som fångade mitt intresse från första sidan. Karaktärerna kändes äkta och miljöerna var otroligt fint beskrivna. Det enda minuset var att slutet kändes lite förhastat, men helhetsupplevelsen är helt klart värd en stark rekommendation!",
+    "rating": "8/10"
+  }
+]
+// jsRecensioner[0].namn = anna. Knappen [0 + 1]. Om [n === 2 -> n = 0]

@@ -57,3 +57,8 @@ Jag använde DOMContentLoaded och loadLocalStorage() på document.addEventListen
 
 ## .start
 Jag använde position relative så att jag kan sätta position absolute på videon. Och position absoloute med hjälp av z-index hjälper mig sätta videon som bakgrund. Och för att få texten och rubriken att visas, körde jag z-index 1 på dem. Och sist object-fit: cover; för att få den exakt bredd och lång som .start
+
+### AI använding:
+Jag använde ai för object-cover
+
+Också får att generera namn, recension och omdöme på omdöme sektionen. Bara texten
