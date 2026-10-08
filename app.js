@@ -78,9 +78,16 @@ function loadLocalStorage() {
    
     bokningar.forEach( (bokning) => {
         const li = document.createElement("li")
+        const btn = document.createElement("button")
         li.textContent = bokning.namn + " - " + bokning.datum
+        btn.textContent = "Avboka"
 
+        btn.addEventListener("click", () => {
+            li.remove();
+            
+        })
         listContainer.appendChild(li)
+        listContainer.appendChild(btn)
     })
     
 } 
