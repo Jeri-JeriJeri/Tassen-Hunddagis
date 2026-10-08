@@ -9,7 +9,7 @@ function getTime () {
     const hour = String(time.getHours()).padStart(2, "0")
     const minute = String(time.getMinutes()).padStart(2, "0")
     const second = String(time.getSeconds()).padStart(2, "0") 
-    tid.textContent = `${hour}:${minute}:${second}` 
+    tid.textContent = `Tid: ${hour}:${minute}:${second}` 
 }
 
 function isOpenedOrClosed () {
@@ -37,7 +37,7 @@ function getDate () {
     const month = String(time.getMonth()).padStart(2, "0");
     const dateDay = String(time.getDate()).padStart(2, "0");
     
-    const textDate = `${year}/${month}/${dateDay}`
+    const textDate = `Datum: ${year}/${month}/${dateDay}`
     datum.textContent = textDate
 }
 setInterval(getDate, 1000);
