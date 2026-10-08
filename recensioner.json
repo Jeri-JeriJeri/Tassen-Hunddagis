@@ -1,0 +1,17 @@
+[
+  {
+    "namn": "Anna",
+    "recensionen": "Mycket bra upplevelse! Jag är riktigt nöjd och kommer gärna tillbaka.",
+    "rating": 9
+  },
+  {
+    "namn": "Erik",
+    "recensionen": "Helt okej, men det finns några saker som skulle kunna förbättras.",
+    "rating": 6
+  },
+  {
+    "namn": "Sofia",
+    "recensionen": "Tyvärr blev jag besviken. Servicen var långsam och upplevelsen levde inte upp till mina förväntningar.",
+    "rating": 3
+  }
+]
