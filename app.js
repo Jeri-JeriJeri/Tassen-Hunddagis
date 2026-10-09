@@ -55,7 +55,7 @@ let bokningar = [];
 function addLocalStorage() {
     const namn = hundNamn.value
     const datum = bokatDatum.value;
-
+    
     const bokning = {
         namn: namn,
         datum: datum
@@ -63,36 +63,37 @@ function addLocalStorage() {
     
     bokningar.push(bokning)
     localStorage.setItem("bokningar", JSON.stringify(bokningar))
-
+    
     loadLocalStorage();
-    }
+}
 
 function loadLocalStorage() {
     const sparadeBokningar = localStorage.getItem("bokningar");
-
+    
     if (sparadeBokningar) {
         bokningar = JSON.parse(sparadeBokningar)
     }
-
+    
     listContainer.innerHTML = "";
-   
-    bokningar.forEach( (bokning) => {
+     bokningar.forEach( (bokning) => {
         const li = document.createElement("li")
         const btn = document.createElement("button")
+        btn.setAttribute("id", "avbokning-btn")
+        li.setAttribute("class", "bokade-item")
         li.textContent = bokning.namn + " - " + bokning.datum
         btn.textContent = "Avboka"
-
+        
         btn.addEventListener("click", () => {
             // Remove item
             li.remove();
             btn.remove();
             
-        })
-        listContainer.appendChild(li)
-        listContainer.appendChild(btn)
-    })
-    
-} 
+            })
+            listContainer.appendChild(li)
+            li.appendChild(btn)
+            })
+            
+            }  
 
 document.addEventListener("DOMContentLoaded", (e) => {
     loadLocalStorage();
