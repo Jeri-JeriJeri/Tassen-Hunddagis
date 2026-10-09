@@ -214,7 +214,7 @@ padding-bottom: 1rem;
 
 
 .omdomen button:active {
-    background-color: ;
+    transform: translateY(5px);
 }
 .boka {
     grid-area: boka;
