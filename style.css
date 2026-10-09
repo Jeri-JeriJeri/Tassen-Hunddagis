@@ -11,7 +11,7 @@ body {
 }
 
 /* HEADER OCH NAV */
-header, footer section{
+header, footer{
     position: sticky;
     z-index: 2;
     top: 0;
@@ -58,7 +58,7 @@ main {
     gap: 1rem;
 }
 section, video {
-    border-radius: 60px 20px 60px 20px;
+    border-radius: 60px 20px;
     border: #282C35 1px solid;
 }
 
@@ -304,13 +304,15 @@ padding-bottom: 1rem;
     transform: translateY(5px);
 }
 
-
+footer section {
+    border: none;
+}
 footer {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr fit-content;
     grid-area: footer;
-    background-color: #505591;
+    border-radius: 20px 20px 0 0;
     color: #F8F7E2;
         
         

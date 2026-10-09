@@ -75,7 +75,7 @@ function loadLocalStorage() {
     }
     
     listContainer.innerHTML = "";
-     bokningar.forEach( (bokning) => {
+    bokningar.forEach( (bokning, index) => {
         const li = document.createElement("li")
         const btn = document.createElement("button")
         btn.setAttribute("id", "avbokning-btn")
@@ -84,12 +84,16 @@ function loadLocalStorage() {
         btn.textContent = "Avboka"
         
         btn.addEventListener("click", () => {
-            // Remove item
+            // Ta bort bokningen
             li.remove();
             btn.remove();
             
-            })
-            listContainer.appendChild(li)
+            bokningar = bokningar.filter((bokning) => bokning.id !== bokning.id)
+            
+            localStorage.setItem("bokningar", JSON.stringify(bokningar))
+            
+        })
+        listContainer.appendChild(li)
             li.appendChild(btn)
             })
             
