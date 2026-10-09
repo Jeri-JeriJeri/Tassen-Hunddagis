@@ -160,18 +160,28 @@ h1 {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+} 
+td {
+    border-left: #282C35 2px solid;
+    border-bottom: #282C35 2px solid;   
+    padding-left: 1rem ;
+    
 }
+th {    
+    border-right: #282C35 2px solid;
+    border-bottom: #282C35 2px solid;
+} 
 .table-oppettider {
     width: 50dvw;
-    border: 1px solid black;
+    border: #282C35 1px solid ;
     margin-bottom: 2rem;
 }
 .table-hundskotare {
-    width: 50dvw;
-    border: 1px solid black;
+    width: 60dvw;
+    border: #282C35 1px solid;
     margin-bottom: 2rem;
     
-}
+} 
 .opettider h2{
 align-self: center;
 }
