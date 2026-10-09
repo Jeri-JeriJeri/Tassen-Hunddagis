@@ -114,7 +114,7 @@ h1 {
     align-items: center;
     background: #f0ede5;
 }
-.open span {
+.tid-datum {
     background: #F6f4ef;
     font-size: 2rem;
     border: 1px solid black;
@@ -146,7 +146,7 @@ h1 {
     font-size: 1.5rem;
     background: #F6f4ef;
     border: 1px solid black;
-    padding: 1rem;
+    padding: 0.7rem;
     border-radius: 24px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 2);
 
@@ -155,7 +155,31 @@ h1 {
 .opettider {
     grid-area: opettider;
     background: #f0ede5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
+.table-oppettider {
+    width: 50dvw;
+    border: 1px solid black;
+    margin-bottom: 2rem;
+}
+.table-hundskotare {
+    width: 50dvw;
+    border: 1px solid black;
+    margin-bottom: 2rem;
+    
+}
+.opettider h2{
+align-self: center;
+}
+
+.omdomen {
+    grid-area: omdome;
+}
+
 .boka {
     grid-area: boka;
     background: #F6f4ef;

@@ -18,16 +18,16 @@ function isOpenedOrClosed () {
     const hour = time.getHours();
 
     if (dag >= 1 && dag <= 5 && (hour >= 7 && hour < 18)) {
-        openClosed.textContent = "Öppet"
+        openClosed.textContent = " Öppet"
         openClosed.style.color = "green"
 
     }
     else if(dag === 6 && (hour >= 9 && hour < 14)) {
-        openClosed.textContent = "Öppet"
+        openClosed.textContent = " Öppet"
         openClosed.style.color = "green"
     }
     else {
-     openClosed.textContent = "Stängd"
+     openClosed.textContent = " Stängd"
      openClosed.style.color = "red"
     }
 }
