@@ -120,30 +120,36 @@ const jsonRecensioner = [
     {
     "namn": "Anna",
     "recensionen": "'Mycket bra upplevelse! Jag är riktigt nöjd och kommer gärna tillbaka.'",
-    "rating": "9/10"
+    "rating": "9/10",
+    "stars": "★★★★★★★★★☆"
 },
 {
     "namn": "Erik",
     "recensionen": "'Helt okej, men det finns några saker som skulle kunna förbättras.'",
-    "rating": "6/10"
+    "rating": "6/10",
+    "stars": "★★★★★★☆☆☆☆"
 },
 {
     "namn": "Kim",
     "recensionen": "'Fantastiskt personal och trygg miljö - varm rekommendation!'",
-    "rating": "8/10"
+    "rating": "8/10",
+    "stars": "★★★★★★☆☆"
   }
 ]
 const omdomeBtn = document.getElementById("omdome-btn")
 const recensionText = document.getElementById("recension-text")
 const recensionPerson = document.getElementById("recension-person")
 const recensionRating = document.getElementById("recension-rating")
+const recensionStars = document.getElementById("recension-stars")
 let i = 0;
 
 omdomeBtn.addEventListener("click", () => {
+    recensionText.style.fontStyle = "italic"
      recensionNamn.textContent = jsonRecensioner[i].namn;
      recensionText.textContent = jsonRecensioner[i].recensionen
      recensionRating.textContent = jsonRecensioner[i].rating
-
+     recensionStars.textContent = jsonRecensioner[i].stars
+     
     i++;
 
     if (i >= jsonRecensioner.length) {

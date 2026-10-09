@@ -53,7 +53,7 @@ main {
     "open open open"
     "tjanster tjanster tjanster"
     "opettider opettider opettider"
-    "omdomen omdomen omdomen"
+    "omdome omdome omdome"
     "boka boka boka"
     ;
 }
@@ -126,7 +126,7 @@ h1 {
 .tjanster {
     grid-area: tjanster;
     background: #F6f4ef;
-    margin: 0 1rem;
+    padding: 0 1rem;
 }
 .heldag, .halvdag, .pensionat, .klippkort, .hamta-lamna {
     background: #f0ede5;
@@ -149,7 +149,7 @@ h1 {
     padding: 0.7rem;
     border-radius: 24px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 2);
-
+    
     
 }
 .opettider {
@@ -181,18 +181,44 @@ th {
     border: #282C35 1px solid;
     margin-bottom: 2rem;
     
-} 
+}   
 .opettider h2{
 align-self: center;
+}
+.recensioner-container {
+padding-bottom: 1rem;
 }
 
 .omdomen {
     grid-area: omdome;
+    padding: 1rem;
+    text-align: center;
+    background: #F6f4ef;
+}
+.omdomen h2{
+    text-align: left;
+}
+.omdomen button {
+    border-radius: 12px;
+    border: #282C35 1px solid;
+    background-color: #474C80;
+    color: #f0ede5;
+    padding: 0.5rem 0.7rem;
+    transition: padding 0.5s;
+}
+.omdomen button:hover, .omdomen button:focus { 
+    background-color: #595fa1;
+    border: #282C35 2px solid;
+    padding: 0.6rem 0.8rem;
 }
 
+
+.omdomen button:active {
+    background-color: ;
+}
 .boka {
     grid-area: boka;
-    background: #F6f4ef;
+    background: #f0ede5;
 }
 
 footer {
