@@ -17,53 +17,59 @@
                 <a href="#boka"><li>Boka</li></a>
                 <a href="#omdomen"><li>Omdömen</li></a>
                 <a href="#kontakt"><li>Kontakt</li></a>
-            </ul>
+            </ul> 
         </nav>
     </header>
     <main>
         <section id="start" class="start">
             <video autoplay muted loop id="bakgrundVideo" src="videos/BackgroundVideo.mp4"></video>
-            <span>Hunddagis och Pensionat</span>
+            <span id="over-text">Hunddagis och Pensionat</span>
             <h1>Välkommen till Tassen</h1>
-            <p>Ett hundhimmelrike på jorden</p>
-            <span id="tid">tid</span>
-            <span id="open-closed">Öppet</span>
+            <p id="under-text">Ett hundhimmelrike på jorden</p>
             
-            <span id="datum">datum</span>
+        </section>
+        <section id="open" class="open">
+        
+                <span id="tid" class="tid-datum">tid</span>
+
+                <p class="tid-datum">Vi är:<span id="open-closed">Öppet</span></p>
+                <span id="datum" class="tid-datum">datum</span>
+        
         </section>
         <section id="tjanster" class="tjanster">
             <h2>Tjänster</h2>
         
-            <div class="heldag">
+            <article class="heldag">
                 <h3>Hunddagis heldag</h3>
                 <p>En hel dag med omsorg, sällskap och möjlighet att vara ute på vårt inhägnade område.</p>
-                <p>320kr</p>
-        </div>
+                <p class="pris">320kr</p>
+        </article>
 
-        <div class="halvdag">
+        <article class="halvdag">
             <h3>Hunddagis halvdag</h3>
             <p>Ett kortare dagisbesök för hundar som inte behöver vara hos oss hela dagen.</p>
-            <p>190kr</p>
-            </div>
+            <p class="pris">190kr</p>
+            </article>
 
-            <div class="pensionat">
+            <article class="pensionat">
             <h3>Pensionat</h3>
             <p>Din hund får bo hos oss över natten med trygg omsorg och regelbundna rastningar.</p>
-            <p>450kr/Natt</p>
-            </div>
+            <p class="pris">450kr/Natt</p>
+            </article>
 
-            <div class="klippkort">
+            <article class="klippkort">
             <h3>Klippkort 7 dagar</h3>
             <p>Ett smidigt alternativ för dig som använder dagis regelbundet.</p>
-            <p>2000kr</p>
-            </div>
+            <p class="pris">2000kr</p>
+            </article>
 
-            <div class="hamta-lamna">
+            <article class="hamta-lamna">
             <h3>Hämta & lämna</h3>
             <p>Vi kan hämta eller lämna din hund när det passar bättre än att du kör själv.</p>
-            <p>150kr</p>
-            </div>
+            <p class="pris">150kr</p>
+            </article>
         </section>
+        
         <section id="opettider" class="opettider">
             <h2>Öppettider</h2>
             <table class="table-oppettider">
@@ -93,23 +99,25 @@
                     <td>Hundskötare och ägare</td>
                 </tr>
             </table>
-            <section id="omdomen" class="omdomen">
-                <h2>Recensioner</h2>
-                <p>Några ord från hundägare som har haft sina hundar hos oss:</p>
-                <div class="recensioner-container">
-                    <p id="recension-text">"Recension"</p>
-                    <p id="recension-person">Liam</p>
-                    <p id="recension-rating">4/5</p>
-                    <button type="button" id="omdome-btn">Visa ett annat omdöme</button>
-                </div>
-    
-            </section>
+            
         </section>
+        <section id="omdomen" class="omdomen">
+            <h2>Recensioner</h2>
+            <p>Några ord från hundägare som har haft sina hundar hos oss:</p>
+            <div class="recensioner-container">
+                <p id="recension-text"></p>
+                <p id="recension-person"></p>
+                <p id="recension-rating"></p>
+                <p id="recension-stars"></p>
+                <button type="button" id="omdome-btn">Visa ett annat omdöme</button>
+            </div>
+        </section>
+    
 
         <section id="boka" class="boka">
             <h2>Skicka en Bokningsförfrågan</h2>
             <p>Fyll in hundens namn och önskat datum</p>
-            <p>Din förfrågan sparas i din webbläsare, vi ringer upp dig</p>
+            <p class="gray-txt">Din förfrågan sparas i din webbläsare, vi ringer upp dig</p>
             <form class="bokning-form" id="bokning-form">
                 <label for="bokat-namn">Hundens Namn:</label>
                 <input type="text" id="bokat-namn" name="namn" required>
@@ -120,28 +128,37 @@
             <h3>Dina Bokningar:</h3>
             <ul class="bokning-sparade" id="bokning-sparade">
                 
-            </ul>
+            </ul> 
+            
         </section>
             
             
-    </section>
+    
     
 </main>
     <footer class="footer-section">
         
         
+        <section id="kontakt" class="kontakt">
+            <h2 class="kontakt-text">Kontakta Oss</h2>
+            <p class="kontakt-text">Har du frågor eller vill bekräfta en bokning? Ring eller mejla oss så hjälper vi dig</p>
+            <div class="article-container">
+            <article class="adress-art">
+                        <h3>Adress</h3>
+                        <p>Hagvögen 4</p>
+                    </article>
+                    <article class="telefon-art">
+                        <h3>Telefon</h3>
+                        <p>0300-12 34 56</p>
+                    </article>
+                    <article class="epost-art">
+                        <h3>E-post</h3>
+                        <a href="mailto:hej@tassen.se">hej@tassen.se</a>
+                    </article>
+            </div>
+        </section>
         <section class="footer-logga">
             <p>&copy; Tassen</p>
-        </section>
-        <section id="kontakt" class="kontakt">
-            <h2>Kontakta Oss</h2>
-            <p>Har du frågor eller vill bekräfta en bokning? Ring eller mejla oss så hjälper vi dig</p>
-            <h3>Adress</h3>
-            <p>Hagvögen 4</p>
-            <h3>Telefon</h3>
-            <p>0300-12 34 56</p>
-            <h3>E-post</h3>
-            <a href="mailto:hej@tassen.se"><p>hej@tassen.se</p></a>
         </section>
         
     </footer>

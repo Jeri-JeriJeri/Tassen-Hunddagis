@@ -9,7 +9,7 @@ function getTime () {
     const hour = String(time.getHours()).padStart(2, "0")
     const minute = String(time.getMinutes()).padStart(2, "0")
     const second = String(time.getSeconds()).padStart(2, "0") 
-    tid.textContent = `${hour}:${minute}:${second}` 
+    tid.textContent = `Tid: ${hour}:${minute}:${second}` 
 }
 
 function isOpenedOrClosed () {
@@ -18,16 +18,16 @@ function isOpenedOrClosed () {
     const hour = time.getHours();
 
     if (dag >= 1 && dag <= 5 && (hour >= 7 && hour < 18)) {
-        openClosed.textContent = "Öppet"
+        openClosed.textContent = " Öppet"
         openClosed.style.color = "green"
 
     }
     else if(dag === 6 && (hour >= 9 && hour < 14)) {
-        openClosed.textContent = "Öppet"
+        openClosed.textContent = " Öppet"
         openClosed.style.color = "green"
     }
     else {
-     openClosed.textContent = "Stängd"
+     openClosed.textContent = " Stängd"
      openClosed.style.color = "red"
     }
 }
@@ -37,7 +37,7 @@ function getDate () {
     const month = String(time.getMonth()).padStart(2, "0");
     const dateDay = String(time.getDate()).padStart(2, "0");
     
-    const textDate = `${year}/${month}/${dateDay}`
+    const textDate = `Datum: ${year}/${month}/${dateDay}`
     datum.textContent = textDate
 }
 setInterval(getDate, 1000);
@@ -55,42 +55,45 @@ let bokningar = [];
 function addLocalStorage() {
     const namn = hundNamn.value
     const datum = bokatDatum.value;
-
+    
     const bokning = {
         namn: namn,
         datum: datum
     }
-
+    
     bokningar.push(bokning)
     localStorage.setItem("bokningar", JSON.stringify(bokningar))
-
+    
     loadLocalStorage();
-    }
+}
 
 function loadLocalStorage() {
     const sparadeBokningar = localStorage.getItem("bokningar");
-
+    
     if (sparadeBokningar) {
         bokningar = JSON.parse(sparadeBokningar)
     }
-
+    
     listContainer.innerHTML = "";
-   
-    bokningar.forEach( (bokning) => {
+     bokningar.forEach( (bokning) => {
         const li = document.createElement("li")
         const btn = document.createElement("button")
+        btn.setAttribute("id", "avbokning-btn")
+        li.setAttribute("class", "bokade-item")
         li.textContent = bokning.namn + " - " + bokning.datum
         btn.textContent = "Avboka"
-
+        
         btn.addEventListener("click", () => {
+            // Remove item
             li.remove();
+            btn.remove();
             
-        })
-        listContainer.appendChild(li)
-        listContainer.appendChild(btn)
-    })
-    
-} 
+            })
+            listContainer.appendChild(li)
+            li.appendChild(btn)
+            })
+            
+            }  
 
 document.addEventListener("DOMContentLoaded", (e) => {
     loadLocalStorage();
@@ -118,30 +121,36 @@ const jsonRecensioner = [
     {
     "namn": "Anna",
     "recensionen": "'Mycket bra upplevelse! Jag är riktigt nöjd och kommer gärna tillbaka.'",
-    "rating": "9/10"
+    "rating": "9/10",
+    "stars": "★★★★★★★★★☆"
 },
 {
     "namn": "Erik",
     "recensionen": "'Helt okej, men det finns några saker som skulle kunna förbättras.'",
-    "rating": "6/10"
+    "rating": "6/10",
+    "stars": "★★★★★★☆☆☆☆"
 },
 {
     "namn": "Kim",
     "recensionen": "'Fantastiskt personal och trygg miljö - varm rekommendation!'",
-    "rating": "8/10"
+    "rating": "8/10",
+    "stars": "★★★★★★☆☆"
   }
 ]
 const omdomeBtn = document.getElementById("omdome-btn")
 const recensionText = document.getElementById("recension-text")
 const recensionPerson = document.getElementById("recension-person")
 const recensionRating = document.getElementById("recension-rating")
+const recensionStars = document.getElementById("recension-stars")
 let i = 0;
 
 omdomeBtn.addEventListener("click", () => {
+    recensionText.style.fontStyle = "italic"
      recensionNamn.textContent = jsonRecensioner[i].namn;
      recensionText.textContent = jsonRecensioner[i].recensionen
      recensionRating.textContent = jsonRecensioner[i].rating
-
+     recensionStars.textContent = jsonRecensioner[i].stars
+     
     i++;
 
     if (i >= jsonRecensioner.length) {
