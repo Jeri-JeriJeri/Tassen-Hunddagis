@@ -250,6 +250,15 @@ padding-bottom: 1rem;
 .boka label, .boka button {
     display: block;
 }
+.boka input {
+ background: #eee4d3;  
+ border: #282C35 1px solid;
+ border-radius: 6px; 
+}
+.boka input:focus {
+    background: #e2d2b6;
+    outline: #282C35 2px solid;
+}
 .boka button {
     margin-top: 0.5rem;
 }
