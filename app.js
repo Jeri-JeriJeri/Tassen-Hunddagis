@@ -86,7 +86,7 @@ function loadLocalStorage() {
         avBokaBtn.addEventListener("click", () => {
             // Ta bort bokningen
             li.remove();
-            btn.remove();
+            avBokaBtn.remove();
             
             bokningar = bokningar.filter((b, i) => i !== index)
             
@@ -108,11 +108,6 @@ e.preventDefault();
 addLocalStorage();
 console.log(bokatDatum.value)
 })
-const b = document.getElementById("btn")
-
-b.addEventListener("click", () => {
-    localStorage.clear()
-})
 // RECENSIONER
 const recension = document.getElementById("recension-text")
 const recensionNamn = document.getElementById("recension-person")
@@ -121,26 +116,8 @@ const recensionOmdome = document.getElementById("recension-rating")
 // Dropdown Menu
 
 // Recension fetcher
-const jsonRecensioner = [
-    {
-    "namn": "Anna",
-    "recensionen": "'Mycket bra upplevelse! Jag är riktigt nöjd och kommer gärna tillbaka.'",
-    "rating": "9/10",
-    "stars": "★★★★★★★★★☆"
-},
-{
-    "namn": "Erik",
-    "recensionen": "'Helt okej, men det finns några saker som skulle kunna förbättras.'",
-    "rating": "6/10",
-    "stars": "★★★★★★☆☆☆☆"
-},
-{
-    "namn": "Kim",
-    "recensionen": "'Fantastiskt personal och trygg miljö - varm rekommendation!'",
-    "rating": "8/10",
-    "stars": "★★★★★★☆☆"
-  }
-]
+import { jsonRecensioner } from "./recensioner.js";
+
 const omdomeBtn = document.getElementById("omdome-btn")
 const recensionText = document.getElementById("recension-text")
 const recensionPerson = document.getElementById("recension-person")
@@ -161,4 +138,3 @@ omdomeBtn.addEventListener("click", () => {
         i = 0;
     }
 })
-// jsRecensioner[0].namn = anna. Knappen [0 + 1]. Om [n === 2 -> n = 0]
