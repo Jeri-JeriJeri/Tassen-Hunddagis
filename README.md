@@ -37,6 +37,8 @@ Samma för getDate
 If satsen för isOpenedOrClosed kör så här "Om dagen är från 1-5 och tiden är från 7 till 18" -> Skriv över #open-close till open
 "Om dagen är 6 och tiden är mellan 9 och 14 skriv över #open-close till open" Annars står det Ständgt. Ingen if sats för söndag eftersom tassen är ständgt 
 
+# Omdöme
+Jag skapade recensioner.js för att arrayen med objekterna inne eftersom det blir mycket text och det är lättare om man ser inte det i koden. Exporterade den och importerade i app.js
 # Bokningsförfrågan 
 Bokningsförfrågan kommer vara en form. Javascript kommer hämta hundens namn och datumet och spara den via localStorage.
 

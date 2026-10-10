@@ -107,23 +107,10 @@ const recensionOmdome = document.getElementById("recension-rating")
 // Dropdown Menu
 
 // Recension fetcher
-const jsonRecensioner = [
-    {
-    "namn": "Anna",
-    "recensionen": "Mycket bra upplevelse! Jag är riktigt nöjd och kommer gärna tillbaka.",
-    "rating": "9/10"
-},
-{
-    "namn": "Erik",
-    "recensionen": "Helt okej, men det finns några saker som skulle kunna förbättras.",
-    "rating": "6/10"
-},
-{
-    "namn": "Kim",
-    "recensionen": "Fantastiskt personal och trygg miljö – varm rekommendation!",
-    "rating": "8/10"
-  }
-]
+
+import { jsonRecensioner } from "./recensioner";
+
+
 const omdomeBtn = document.getElementById("omdome-btn")
 const recensionText = document.getElementById("recension-text")
 const recensionPerson = document.getElementById("recension-person")
@@ -141,4 +128,3 @@ omdomeBtn.addEventListener("click", () => {
         i = 0;
     }
 })
-// jsRecensioner[0].namn = anna. Knappen [0 + 1]. Om [n === 2 -> n = 0]
