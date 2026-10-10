@@ -57,13 +57,16 @@ main {
     ;
     gap: 1rem;
 }
-section, video {
+section {
     border-radius: 60px 20px;
     border: #282C35 1px solid;
 }
 
 .start {
     grid-area: start ;
+    border-radius: none;
+    border: none;
+
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
@@ -132,8 +135,14 @@ h1 {
 
 .tjanster {
     grid-area: tjanster;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: #eee4d3;
     padding: 0 1rem;
+}
+.tjanster h2 {
+    align-self: flex-start;
 }
 .heldag, .halvdag, .pensionat, .klippkort, .hamta-lamna {
     background: #f0ede5;
@@ -169,23 +178,27 @@ h1 {
     flex-wrap: wrap;
 } 
 td {
-    border-left: #282C35 2px solid;
-    border-bottom: #282C35 2px solid;   
-    padding-left: 1rem ;
+    border-bottom: #282C35 1px solid;   
+    padding-bottom: 0.5rem;
+    padding-right: 1rem; 
+    text-align: right;
+    
     
 }
+
 th {    
-    border-right: #282C35 2px solid;
-    border-bottom: #282C35 2px solid;
+    border-bottom: #282C35 1px solid;   
+    padding-bottom: 0.5rem;
+    padding-left: 1rem; 
+    text-align: left;
+    
 } 
 .table-oppettider {
-    width: 50dvw;
-    border: #282C35 1px solid ;
+    width: 50dvw; 
     margin-bottom: 2rem;
 }
 .table-hundskotare {
-    width: 60dvw;
-    border: #282C35 1px solid;
+    width: 40dvw;
     margin-bottom: 2rem;
     
 }   
@@ -304,6 +317,7 @@ padding-bottom: 1rem;
     transform: translateY(5px);
 }
 
+
 footer section {
     border: none;
 }
@@ -338,9 +352,59 @@ footer {
     .footer-logga p {
         margin-right: 1rem;
     }
-    /* Styling av #start */
-
-
-#datum {
-    display: block;
+    /* Media Queries */
+@media (min-width: 700px) {
+    .heldag, .halvdag, .pensionat, .klippkort, .hamta-lamna {
+    width: 80vw;
+    background: #f0ede5;
+    border: 1px solid black;
+    padding:1rem;
+    border-radius: 6px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 2);
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    
 }
+}
+@media (min-width: 1000px) {
+    main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "start start start"
+    "open open opettider"
+    "tjanster tjanster tjanster"
+    "omdome omdome omdome"
+    "boka boka boka"
+    ;
+    gap: 1rem;
+}
+
+ 
+.table-oppettider {
+    width: 30vw;
+}
+.table-hundskotare {
+    width: 30dvw;
+}   
+
+
+.heldag, .halvdag, .pensionat, .klippkort, .hamta-lamna {
+    width: 40vw;
+}
+.tjanster h2 {
+    width: 100%;
+}
+.tjanster {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+
+}
+
