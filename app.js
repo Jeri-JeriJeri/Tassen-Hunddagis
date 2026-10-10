@@ -108,11 +108,7 @@ e.preventDefault();
 addLocalStorage();
 console.log(bokatDatum.value)
 })
-const b = document.getElementById("btn")
 
-b.addEventListener("click", () => {
-    localStorage.clear()
-})
 // RECENSIONER
 const recension = document.getElementById("recension-text")
 const recensionNamn = document.getElementById("recension-person")
@@ -121,7 +117,7 @@ const recensionOmdome = document.getElementById("recension-rating")
 // Dropdown Menu
 
 // Recension fetcher
-import { jsonRecensioner } from "./recensioner";
+import { jsonRecensioner } from "./recensioner.js";
 
 const omdomeBtn = document.getElementById("omdome-btn")
 const recensionText = document.getElementById("recension-text")
