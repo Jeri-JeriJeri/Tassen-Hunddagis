@@ -85,12 +85,13 @@ function loadLocalStorage() {
         
         avBokaBtn.addEventListener("click", () => {
             // Ta bort bokningen
-            li.remove();
-            avBokaBtn.remove();
-            
             bokningar = bokningar.filter((b, i) => i !== index)
             
             localStorage.setItem("bokningar", JSON.stringify(bokningar))
+
+                li.remove();
+                avBokaBtn.remove();
+
             
         })
         listContainer.appendChild(li)
