@@ -23,7 +23,7 @@ Nav kommer vara display flex eftersom det blir lättare och enklare att få list
 Header kommer ha position sticky. Så när man skrollar ner, knapparna finns alltid.
 
 Sidan kommer vara mobile-first och sen kommer jag lägga till media queries för att få den se bättre ut för en tablet och dator (stor skärm)
-## Början av kodering
+# Början av kodering
 Använder clamp(1rem, 2rem, 2.5rem) på nav p för responsivitet. 1rem blir minsta storleken "hem" knappen kan vara
 
 Använder grid och grid-area på main för att lättare sätta varsin sektion i sin egen plats
@@ -42,24 +42,30 @@ Jag skapade recensioner.js för att arrayen med objekterna inne eftersom det bli
 # Bokningsförfrågan 
 Bokningsförfrågan kommer vara en form. Javascript kommer hämta hundens namn och datumet och spara den via localStorage.
 
-# addLocalStorage:
+## addLocalStorage:
  Först hämtar datan från de 2 inputs. Sen sparas de i ett objekt (bokning) och de läggs till arrayen bokningar via .push(). Efter det sparas arrayen till localStorage och använde jag JSON.stringify() så att man kan läsa det som sparades. Sedan körs loadLocalStorage() så att listan uppdateras i real-time. 
 
-# loadLocalStorage: 
+## loadLocalStorage: 
 Skapade varibeln sparadeBokningar som hämtar sparade items. If satsen kör om nånting finns i variabeln. Om ja skickas localStorage items som ett objekt
 
 Annars listan kommer vara tomt
 
-# forEach 
+## forEach 
 För varje bokningar item skapas en li element med value av hundensNamn och Datumet. Och sist läggs li elementet som barn till ul elementet
 
 
 Jag använde DOMContentLoaded och loadLocalStorage() på document.addEventListener för att visa items som är sparade i localStorage när sidan laddas. 
 
+## Ta bort knappen
+li.remove och btn remove raderar själva boxen direkt när man trycker på avboka knappen, annars skulle man behöva refresha för att se dem borta.
+Knapp eventlistener: filterar bort de som har samma index. Så om en bokning för exempel har indexen 3. 3 !== 3 är = false; så den filteras bort och raderas. Sen sparas arrayen igen via localStorage.setItem efter bokningen har raderas
 
-## .start
+# .start
 Jag använde position relative så att jag kan sätta position absolute på videon. Och position absoloute med hjälp av z-index hjälper mig sätta videon som bakgrund. Och för att få texten och rubriken att visas, körde jag z-index 1 på dem. Och sist object-fit: cover; för att få den exakt bredd och lång som .start
 
+## Recensioner
+Recensionerna sitter i ett array som innehåller objekt.
+Jag använde event listener som kollar på variabeln i. Varje gång man trycker, i.värden skrivs ut i HTML och sen kör +1 i arrayen för att hoppa till nästa person. Och det finns 3 i.värde som är namn, recension och rating
 ### AI använding:
 Jag använde ai för object-cover
 
