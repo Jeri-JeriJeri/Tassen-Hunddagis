@@ -384,24 +384,26 @@ footer {
     gap: 1rem;
 }
 
-/* 
+ 
 .table-oppettider {
     width: 30vw;
-    text-align: center;
-    border: #282C35 1px solid ; 
-    margin-bottom: 2rem;
 }
 .table-hundskotare {
     width: 30dvw;
-    text-align: center;
-    border: #282C35 1px solid;
-    margin-bottom: 2rem;
-    
 }   
-}
-*/
+
+
 .heldag, .halvdag, .pensionat, .klippkort, .hamta-lamna {
-    width: 30vw;
+    width: 40vw;
+}
+.tjanster h2 {
+    width: 100%;
+}
+.tjanster {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
 }
 
 }
