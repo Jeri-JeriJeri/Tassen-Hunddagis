@@ -62,7 +62,7 @@ main {
     "omdome omdome omdome"
     "boka boka boka"
     ;
-    
+    gap: 0.4rem;
 }
 section {
     border-radius: 20px;
@@ -366,17 +366,23 @@ footer {
     "tjanster tjanster tjanster"
     "omdome omdome omdome"
     "boka boka boka"
-    ;}
+    ;
+}
+    .open {
+        background: #f8f9fb;
+    }
     .opettider{
         margin: auto;
         height: fit-content;
         padding: 2rem 0;
         justify-content: space-between;
+        
     }
     .kort {
         width: 40vw;
     }
     .tjanster {
+        
         flex-direction: row;
         gap: 2rem;
         flex-wrap: wrap;
@@ -412,7 +418,7 @@ gap: 2.5rem;
     "omdome omdome omdome"
     "boka boka boka"
     ;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 .start h1 {
     font-size: 3.5rem;
