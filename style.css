@@ -7,7 +7,7 @@ body {
     margin: 0;
     font-family: Georgia, serif;
     color: #282C35;
-    background-color: #FBF9F5 ;
+    background-color: #bdc0db ;
 }
 
 /* HEADER OCH NAV */
@@ -65,7 +65,7 @@ main {
     
 }
 section {
-    border-radius: 60px 20px;
+    border-radius: 20px;
     border: #282C35 1px solid;
 }
 
@@ -114,13 +114,13 @@ h1 {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background: #F3ECE0 ;
+    background: #e5e6f1 ;
     
     
 }
 
 .tid-datum {
-    background: #F6f4ef;
+    background: #f8f9fb;
     font-size: 2rem;
     border: 1px solid black;
     padding:1rem;
@@ -128,50 +128,19 @@ h1 {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 2);
 }
 
-.tjanster {
-    grid-area: tjanster;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #eee4d3;
-    padding: 0 1rem;
-}
-.tjanster h2 {
-    align-self: flex-start;
-}
-.heldag, .halvdag, .pensionat, .klippkort, .hamta-lamna {
-    background: #f0ede5;
-    border: 1px solid black;
-    padding:1rem;
-    border-radius: 6px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 2);
-    margin-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    
-}
-.pris {
-    font-size: 1.5rem;
-    background: #F6f4ef;
-    border: 1px solid black;
-    padding: 0.7rem;
-    border-radius: 24px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 2);
-    
-    
-}
 .opettider {
     grid-area: opettider;
-    background: #F3ECE0;
+    background: #f8f9fb;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 } 
+.opettider h2 {
+    align-self: flex-start;
+    padding: 0 1rem;
+}
 caption {
     font-weight: bold;
     font-size: 1rem;
@@ -182,8 +151,6 @@ td {
     padding-bottom: 0.5rem;
     padding-right: 1rem; 
     text-align: right;
-    
-    
 }
 
 th {    
@@ -202,9 +169,45 @@ th {
     margin-bottom: 2rem;
     
 }   
-.opettider h2{
-align-self: center;
+
+/* Tjänster */
+.tjanster {
+    grid-area: tjanster;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #e5e6f1;
+    padding: 0 1rem;
 }
+.tjanster h2 {
+    align-self: flex-start;
+}
+.kort {
+    background: #d4d6e7;
+    border: 1px solid black;
+    padding:1rem;
+    border-radius: 6px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 2);
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.pris {
+    font-size: 1.5rem;
+    background: #f8f9fb;
+    border: 1px solid black;
+    padding: 0.7rem;
+    border-radius: 24px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 2);
+    
+    
+}
+/* RECENSIONER */
 .recensioner-container {
 padding-bottom: 1rem;
 }
@@ -213,7 +216,7 @@ padding-bottom: 1rem;
     grid-area: omdome;
     padding: 1rem;
     text-align: center;
-    background: #eee4d3;
+    background: #f8f9fb;
 }
 .omdomen h2{
     text-align: left;
@@ -242,7 +245,7 @@ padding-bottom: 1rem;
 }
 .boka {
     grid-area: boka;
-    background: #F3ECE0;
+    background: #e5e6f1;
 }
 .boka h2, .boka h3 {
     padding-left: 1rem;
@@ -262,12 +265,12 @@ padding-bottom: 1rem;
     display: block;
 }
 .boka input {
-    background: #eee4d3;  
+    background: #f8f9fb;  
     border: #282C35 1px solid;
     border-radius: 6px; 
 }
 .boka input:focus {
-    background: #e2d2b6;
+    background: #bdc0db;
     outline: #282C35 2px solid;
 }
 .boka button {
@@ -353,12 +356,29 @@ footer {
         margin-right: 1rem;
     }
     /* Media Queries */
-@media (min-width: 700px) {
-    .heldag, .halvdag, .pensionat, .klippkort, .hamta-lamna {
+@media (min-width: 768px) {
+    main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "start start start"
+    "open open opettider"
+    "tjanster tjanster tjanster"
+    "omdome omdome omdome"
+    "boka boka boka"
+    ;}
+    .opettider{
+        margin: auto;
+        height: fit-content;
+        padding: 2rem 0;
+        justify-content: space-between;
+    }
+    .kort {
         width: 40vw;
     }
     .tjanster {
         flex-direction: row;
+        gap: 2rem;
         flex-wrap: wrap;
         justify-content: space-around;
     }
@@ -368,7 +388,7 @@ footer {
     
     
 }
-@media (min-width: 1000px) { 
+@media (min-width: 1200px) { 
 nav {
     flex-direction: row;
     align-items: center;
@@ -416,7 +436,7 @@ h1 {
 }   
 
 
-.heldag, .halvdag, .pensionat, .klippkort, .hamta-lamna {
+.kort {
     width: 40vw;
 }
 .tjanster h2 {
@@ -424,6 +444,7 @@ h1 {
 }
 .tjanster {
     flex-direction: row;
+    gap: 2rem;
     flex-wrap: wrap;
     justify-content: space-evenly;
     
