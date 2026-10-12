@@ -1,16 +1,23 @@
-/* GLOBAL RESET */
+/*
+ GLOBAL RESET 
+ */
 * {
     box-sizing: border-box;
     
 }
+/*
+ Body 
+ */
 body {
     margin: 0;
-    font-family: Georgia, serif;
+    font-family: "Oswald", sans-serif;
     color: #282C35;
     background-color: #bdc0db ;
 }
 
-/* HEADER OCH NAV */
+/* 
+HEADER OCH NAV 
+*/
 header{
     position: sticky;
     z-index: 2;
@@ -50,7 +57,9 @@ a:hover {
     text-decoration: none;
 }
 
-/* MAIN GRID */
+/* 
+MAIN Och ALLA Sektioner 
+*/
 main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -69,6 +78,7 @@ section {
     border: #282C35 1px solid;
 }
 
+/* Start */
 .start {
     grid-area: start ;
     display: flex;
@@ -105,7 +115,9 @@ h1 {
 #under-text {
     margin: 0 2.2rem;
 }
-
+/* 
+OPEN 
+*/
 .open {
     
     grid-area: open;
@@ -128,6 +140,9 @@ h1 {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 2);
 }
 
+/*
+ Öppettider
+ */
 .opettider {
     grid-area: opettider;
     background: #f8f9fb;
@@ -170,7 +185,9 @@ th {
     
 }   
 
-/* Tjänster */
+/*
+ Tjänster 
+*/
 .tjanster {
     grid-area: tjanster;
     display: flex;
@@ -207,7 +224,9 @@ th {
     
     
 }
-/* RECENSIONER */
+/* 
+RECENSIONER 
+*/
 .recensioner-container {
 padding-bottom: 1rem;
 }
@@ -243,6 +262,9 @@ padding-bottom: 1rem;
     opacity: 0.7;
     color: #282C35;
 }
+/* 
+Bokning
+ */
 .boka {
     grid-area: boka;
     background: #e5e6f1;
@@ -319,6 +341,9 @@ padding-bottom: 1rem;
 #avbokning-btn:active {
     transform: translateY(5px);
 }
+/*
+ Footer
+ */
 
 
 footer section {
