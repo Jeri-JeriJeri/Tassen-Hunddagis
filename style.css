@@ -382,7 +382,30 @@ footer {
     }
     /* Media Queries */
 @media (min-width: 768px) {
-    main {
+
+#over-text {
+    font-size: 1.5rem;
+}
+h1 {
+    
+    font-size: 3.5rem;
+}
+h2 {
+    font-size: 1.6rem;
+    
+}
+h3 {
+    font-size: 1.4rem;
+    
+}
+#under-text {
+    font-size: 1.6rem;
+    
+}
+p {
+    font-size: 1.4rem;
+}
+main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 
@@ -393,27 +416,27 @@ footer {
     "boka boka boka"
     ;
 }
-    .open {
+.open {
         background: #f8f9fb;
     }
-    .opettider{
+.opettider{
         margin: auto;
         height: fit-content;
         padding: 2rem 0;
         justify-content: space-between;
         
     }
-    .kort {
+.kort {
         width: 40vw;
     }
-    .tjanster {
+.tjanster {
         
         flex-direction: row;
         gap: 2rem;
         flex-wrap: wrap;
         justify-content: space-around;
     }
-    .tjanster h2 {
+.tjanster h2 {
         width: 100%;
     }
     
@@ -429,11 +452,29 @@ nav {
 }
 nav ul {
     padding-right: 2rem;
-gap: 2.5rem;
+    gap: 2.5rem;
+}
+h1 {
+    font-size: 3.5rem;
+} 
+#over-text {
+    font-size: 1.5rem;
 }
 
+#under-text {
+    font-size: 1.6rem;    
+} 
+h2 {
+    font-size: 1.6rem;
+}
+h3 {
+    font-size: 1.4rem;
+}
+p {
+    font-size: 1.3rem;
+}
     
-    main {
+main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 
@@ -445,20 +486,7 @@ gap: 2.5rem;
     ;
     gap: 0.5rem;
 }
-.start h1 {
-    font-size: 3.5rem;
-}
-#over-text {
-    font-size: 1.5rem;
-}
-h1 {
-    
-    font-size: 2.2rem;
-}
-#under-text {
-    font-size: 1.6rem;
-    
-} 
+ 
 .table-oppettider {
     width: 30vw;
 }
@@ -470,9 +498,7 @@ h1 {
 .kort {
     width: 40vw;
 }
-.tjanster h2 {
-    width: 100%;
-}
+
 .tjanster {
     flex-direction: row;
     gap: 2rem;
