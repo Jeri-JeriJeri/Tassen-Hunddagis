@@ -11,7 +11,7 @@ export const jsonRecensioner = [
 },
 {
     "namn": "Kim",
-    "recensionen": "Fantastiskt personal och trygg miljö – varm rekommendation!",
+    "recensionen": "Fantastiskt personal och trygg miljö - varm rekommendation!",
     "rating": "8/10"
   }
 ]
