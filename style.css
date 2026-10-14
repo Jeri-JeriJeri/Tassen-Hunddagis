@@ -616,35 +616,16 @@ footer h3 {
 
     nav p {
         margin-left: 1rem;
+        font-size: 1.8rem;
     }
 
     nav ul {
         padding-right: 2rem;
-        gap: 2.5rem;
+        gap: 2rem;
+        font-size: 1rem;
     }
-
-    h1 {
-        font-size: 3.5rem;
-    }
-
-    #over-text {
-        font-size: 1.5rem;
-    }
-
-    #under-text {
-        font-size: 1.6rem;
-    }
-
     h2 {
-        font-size: 1.6rem;
-    }
-
-    h3 {
-        font-size: 1.4rem;
-    }
-
-    p {
-        font-size: 1.3rem;
+        font-size: 1.8rem;
     }
 
     main {
@@ -659,6 +640,19 @@ footer h3 {
         ;
         gap: 0.5rem;
     }
+    .tid-datum {
+        font-size: 1.8rem;
+    }
+    caption {
+        font-size: 1.5rem;
+    }
+    th {
+        font-size: 1.2rem;
+    }
+    td {
+        font-size: 1.2rem;
+
+    }
 
     .table-oppettider {
         width: 30vw;
@@ -667,18 +661,42 @@ footer h3 {
     .table-hundskotare {
         width: 30dvw;
     }
-
-
-    .kort {
-        width: 40vw;
+    .kort h3 {
+        font-size: 1.5rem;
     }
-
-    .tjanster {
-        flex-direction: row;
-        gap: 2rem;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-
+    .kort p {font-size: 1.3rem ;}
+    
+    .omdomen p {
+        font-size: 1.2rem;
+    }
+    .omdomen button {
+        font-size: 1rem;
+    }
+    .boka p {
+        font-size: 1.3rem;
+    }
+    .boka label {font-size:1.5rem ;}
+    .boka input {
+        padding: 0.2rem;
+        font-size: 0.8rem;
+    }
+    #bokning-btn, #avbokning-btn {
+        font-size: 1rem;
+    }
+    .boka h3 {
+        font-size: 1.8rem;
+    }
+    .bokade-item {
+        font-size: 1.3rem;
+    }
+    footer p, footer a {
+    font-size: 1.3rem;
+}
+    footer h3 {
+    font-size: 1.7rem;
+}
+    .kontakt-arti {
+        border: none;
     }
 
 }
