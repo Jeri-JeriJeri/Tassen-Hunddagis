@@ -281,6 +281,10 @@ RECENSIONER
     font-size: 1.4rem;
 }
 
+.omdomen button {
+    font-size: 1.2rem;
+
+}
 .omdomen button,
 #bokning-btn {
     border-radius: 12px;
@@ -289,7 +293,6 @@ RECENSIONER
     color: #f0ede5;
     padding: 0.5rem 0.7rem;
     transition: padding 0.5s;
-    font-size: 1.2rem;
 }
 
 .omdomen button:hover,
@@ -479,9 +482,11 @@ footer h3 {
 
 /* Media Queries */
 @media (min-width: 768px) {
-
-    #over-text {
-        font-size: 1.5rem;
+    nav p {
+    font-size: 2.5rem;
+    }
+    nav ul {
+    font-size: 1.6rem;
     }
 
     h1 {
@@ -490,22 +495,16 @@ footer h3 {
     }
 
     h2 {
-        font-size: 1.6rem;
+        font-size: 2.5rem;
 
     }
+    #over-text {
 
-    h3 {
-        font-size: 1.4rem;
-
+        font-size: 2.2rem;
     }
-
     #under-text {
-        font-size: 1.6rem;
+        font-size: 2.2rem;
 
-    }
-
-    p {
-        font-size: 1.4rem;
     }
 
     main {
@@ -520,8 +519,12 @@ footer h3 {
         ;
     }
 
-    .open {
+    .open{
         background: #f8f9fb;
+    }
+    .tid-datum {
+        font-size: 2.7rem;
+        
     }
 
     .opettider {
@@ -531,10 +534,18 @@ footer h3 {
         justify-content: space-between;
 
     }
-
-    .kort {
-        width: 40vw;
+    caption {
+        font-size: 2.2rem;
     }
+    th {
+        font-size: 1.8rem;
+        
+    }
+    td {
+        font-size: 1.8rem;
+        
+    }
+
 
     .tjanster {
 
@@ -543,11 +554,56 @@ footer h3 {
         flex-wrap: wrap;
         justify-content: space-around;
     }
+    .kort {
+        width: 40vw;
+    }
 
+    .kort h3 {
+        font-size: 2rem;
+    }
+    .kort p {
+        font-size: 1.7rem;
+        
+    }
     .tjanster h2 {
         width: 100%;
     }
+    .omdomen p {
+    font-size: 1.8rem;
+}
+    .omdomen button {
+        font-size: 1.8rem;
+    }
+    .boka p {
+        font-size: 1.8rem;
+    }
+    .boka h3 {
+        font-size: 2rem;
+    }
+    .boka label {
+        font-size: 1.9rem;
+    }
+    .boka input {
+        font-size: 1.5rem;
+    }
+    
+  
+    #bokning-btn, #avbokning-btn {
+    font-size: 1.9rem;
+}
+ .bokade-item {
+    font-size: 1.8rem;
+}
+ footer p, footer a {
+    font-size: 1.8rem;
+}
+footer h3 {
+    font-size: 2.3rem;
+}
 
+.article-container {
+    flex-direction: row;
+}
 
 }
 
