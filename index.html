@@ -87,7 +87,7 @@
         </section>
 
         <section id="opettider" class="opettider">
-            <h2>Öppettider</h2>
+            <!-- <h2>Öppettider</h2> -->
             <table class="table-oppettider">
                 <caption>Öppettider</caption>
                 <tr>
@@ -131,20 +131,23 @@
 
 
         <section id="boka" class="boka">
-            <h2>Skicka en Bokningsförfrågan</h2>
-            <p>Fyll in hundens namn och önskat datum</p>
-            <p class="gray-txt">Din förfrågan sparas i din webbläsare, vi ringer upp dig</p>
-            <form class="bokning-form" id="bokning-form">
-                <label for="bokat-namn">Hundens Namn:</label>
-                <input type="text" id="bokat-namn" name="namn" required>
-                <label for="bokat-datum">Önskat datum</label>
-                <input type="date" id="bokat-datum" name="datum" required>
-                <button id="bokning-btn">Boka</button>
-            </form>
-            <h3>Dina Bokningar:</h3>
-            <ul class="bokning-sparade" id="bokning-sparade">
-
-            </ul>
+            <article class="boka-arti">
+                <h2>Skicka en Bokningsförfrågan</h2>
+                <p>Fyll in hundens namn och önskat datum</p>
+                <p class="gray-txt">Din förfrågan sparas i din webbläsare, vi ringer upp dig</p>
+                <form class="bokning-form" id="bokning-form">
+                    <label for="bokat-namn">Hundens Namn:</label>
+                    <input type="text" id="bokat-namn" name="namn" required>
+                    <label for="bokat-datum">Önskat datum</label>
+                    <input type="date" id="bokat-datum" name="datum" required>
+                    <button id="bokning-btn">Boka</button>
+                </form>
+            </article>
+            <article class="bokade-arti">
+                <h3>Dina Bokningar:</h3>
+                <ul class="bokning-sparade" id="bokning-sparade">
+                </ul>
+            </article>
 
         </section>
 
@@ -160,21 +163,21 @@
             <p class="kontakt-text">Har du frågor eller vill bekräfta en bokning? Ring eller mejla oss så hjälper vi dig
             </p>
             <div class="article-container">
-                <article class="adress-art">
+                <article class="kontakt-arti">
                     <h3>Adress</h3>
                     <p>Hagvögen 4</p>
                 </article>
-                <article class="telefon-art">
+                <article class="kontakt-arti">
                     <h3>Telefon</h3>
                     <p>0300-12 34 56</p>
                 </article>
-                <article class="epost-art">
+                <article class="kontakt-arti">
                     <h3>E-post</h3>
                     <a href="mailto:hej@tassen.se">hej@tassen.se</a>
                 </article>
             </div>
         </section>
-        <section class="footer-logga">
+        <section class="footer-end">
             <p>&copy; Tassen</p>
         </section>
 

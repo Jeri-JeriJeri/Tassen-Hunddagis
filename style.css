@@ -46,6 +46,7 @@ nav ul {
     justify-content: space-around;
     padding: 0;
     margin: 0;
+    font-size: 1.2rem;
 
 }
 
@@ -120,6 +121,7 @@ section {
 
 #over-text {
     margin: 0 1.6rem;
+    font-size: 1.4rem;
 }
 
 h1 {
@@ -129,6 +131,10 @@ h1 {
 
 #under-text {
     margin: 0 2.2rem;
+    font-size: 1.4rem;
+}
+h2 {
+    font-size: 1.8rem;
 }
 
 /* 
@@ -176,8 +182,9 @@ OPEN
 
 caption {
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.6rem;
     padding-bottom: 2px;
+    padding-top: 1rem;
 }
 
 td {
@@ -185,6 +192,7 @@ td {
     padding-bottom: 0.5rem;
     padding-right: 1rem;
     text-align: right;
+    font-size: 1.3rem;
 }
 
 th {
@@ -192,12 +200,14 @@ th {
     padding-bottom: 0.5rem;
     padding-left: 1rem;
     text-align: left;
+    font-size: 1.3rem;
 
 }
 
 .table-oppettider {
     width: 50dvw;
     margin-bottom: 2rem;
+
 }
 
 .table-hundskotare {
@@ -221,7 +231,9 @@ th {
 .tjanster h2 {
     align-self: flex-start;
 }
-
+.kort h3 {
+    font-size: 1.7rem;
+}
 .kort {
     background: #d4d6e7;
     border: 1px solid black;
@@ -234,6 +246,7 @@ th {
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
+    font-size: 1.3rem;
 
 }
 
@@ -262,10 +275,18 @@ RECENSIONER
     background: #f8f9fb;
 }
 
+
 .omdomen h2 {
     text-align: left;
 }
+.omdomen p {
+    font-size: 1.4rem;
+}
 
+.omdomen button {
+    font-size: 1.2rem;
+
+}
 .omdomen button,
 #bokning-btn {
     border-radius: 12px;
@@ -312,6 +333,7 @@ Bokning
 
 .boka p {
     text-align: center;
+    font-size: 1.4rem;
 }
 
 .boka form {
@@ -322,6 +344,10 @@ Bokning
     gap: 0.2rem;
 }
 
+.boka label {
+    font-size: 1.4rem;
+    
+}
 .boka label,
 .boka button {
     display: block;
@@ -331,6 +357,8 @@ Bokning
     background: #f8f9fb;
     border: #282C35 1px solid;
     border-radius: 6px;
+    padding: 0.5rem 0;
+    font-size: 1.2rem;
 }
 
 .boka input:focus {
@@ -338,8 +366,10 @@ Bokning
     outline: #282C35 2px solid;
 }
 
-.boka button {
-    margin-top: 0.5rem;
+
+#bokning-btn, #avbokning-btn {
+    margin-top: 1rem;
+    font-size: 1.3rem;
 }
 
 .boka li {
@@ -352,6 +382,7 @@ Bokning
     align-items: center;
     list-style: none;
     text-align: center;
+    padding: 0;
 
 
 
@@ -364,6 +395,7 @@ Bokning
     padding: 1rem 0;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 2);
     border-radius: 6px;
+    font-size: 1.4rem;
 }
 
 #avbokning-btn {
@@ -373,7 +405,6 @@ Bokning
     color: #f0ede5;
     padding: 0.5rem 0.7rem;
     transition: padding 0.5s;
-    margin: 0;
     display: block;
     justify-self: center;
 
@@ -409,36 +440,52 @@ footer {
     border-radius: 20px 20px 0 0;
     color: #F8F7E2;
 }
+footer p, footer a {
+    font-size: 1.4rem;
+}
+footer h3 {
+    font-size: 1.6rem;
+}
 
 
 .kontakt-text {
     margin: 0;
     text-align: center;
-    padding: 1rem;
 }
 
 .article-container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-evenly;
-    margin-left: 2rem;
-    gap: 1rem;
+    margin-top: 1rem;
+    text-align: center;
 
 }
 
-.footer-logga {
+.kontakt-arti h3, .kontakt-arti p {
+    margin: 0;
+}
+.kontakt-arti {
+    padding-bottom: 0.5rem;
+    border-bottom: 1px white solid;
+} 
+.footer-end {
     display: flex;
     flex-direction: row-reverse;
 }
 
-.footer-logga p {
+.footer-end p {
     margin-right: 1rem;
 }
 
 /* Media Queries */
 @media (min-width: 768px) {
-
-    #over-text {
-        font-size: 1.5rem;
+    nav p {
+    font-size: 2.5rem;
+    }
+    nav ul {
+    font-size: 1.4rem;
     }
 
     h1 {
@@ -447,22 +494,16 @@ footer {
     }
 
     h2 {
-        font-size: 1.6rem;
+        font-size: 2.3rem;
 
     }
+    #over-text {
 
-    h3 {
-        font-size: 1.4rem;
-
+        font-size: 2.2rem;
     }
-
     #under-text {
-        font-size: 1.6rem;
+        font-size: 2.2rem;
 
-    }
-
-    p {
-        font-size: 1.4rem;
     }
 
     main {
@@ -477,8 +518,14 @@ footer {
         ;
     }
 
-    .open {
+    .open{
         background: #f8f9fb;
+        height: fit-content;
+        padding: 3rem 0;
+    }
+    .tid-datum {
+        font-size: 2.3rem;
+        
     }
 
     .opettider {
@@ -488,10 +535,18 @@ footer {
         justify-content: space-between;
 
     }
-
-    .kort {
-        width: 40vw;
+    caption {
+        font-size: 2rem;
     }
+    th {
+        font-size: 1.4rem;
+        
+    }
+    td {
+        font-size: 1.4rem;
+        
+    }
+
 
     .tjanster {
 
@@ -500,11 +555,63 @@ footer {
         flex-wrap: wrap;
         justify-content: space-around;
     }
+    .kort {
+        width: 40vw;
+    }
 
+    .kort h3 {
+        font-size: 1.8rem;
+    }
+    .kort p {
+        font-size: 1.4rem;
+        
+    }
     .tjanster h2 {
         width: 100%;
     }
+    .omdomen p {
+    font-size: 1.4rem;
+}
+    .omdomen button {
+        font-size: 1.4rem;
+    }
+    .boka p {
+        font-size: 1.4rem;
+    }
+    .boka h3 {
+        font-size: 1.8rem;
+    }
+    .boka label {
+        font-size: 1.6rem;
+    }
+    .boka input {
+        font-size: 1.2rem;
+    }
+    
+  
+    #bokning-btn {
+    font-size: 1.4rem;
+}
+#avbokning-btn {
+    font-size: 1.2rem;
 
+}
+ .bokade-item {
+    font-size: 1.4rem;
+}
+ footer p, footer a {
+    font-size: 1.4rem;
+}
+footer h3 {
+    font-size: 1.8rem;
+}
+footer h2 {
+    font-size: 2.2rem;
+}
+
+.article-container {
+    flex-direction: row;
+}
 
 }
 
@@ -517,35 +624,16 @@ footer {
 
     nav p {
         margin-left: 1rem;
+        font-size: 1.8rem;
     }
 
     nav ul {
         padding-right: 2rem;
-        gap: 2.5rem;
+        gap: 2rem;
+        font-size: 1rem;
     }
-
-    h1 {
-        font-size: 3.5rem;
-    }
-
-    #over-text {
-        font-size: 1.5rem;
-    }
-
-    #under-text {
-        font-size: 1.6rem;
-    }
-
     h2 {
-        font-size: 1.6rem;
-    }
-
-    h3 {
-        font-size: 1.4rem;
-    }
-
-    p {
-        font-size: 1.3rem;
+        font-size: 1.8rem;
     }
 
     main {
@@ -560,6 +648,19 @@ footer {
         ;
         gap: 0.5rem;
     }
+    .tid-datum {
+        font-size: 1.8rem;
+    }
+    caption {
+        font-size: 1.5rem;
+    }
+    th {
+        font-size: 1.2rem;
+    }
+    td {
+        font-size: 1.2rem;
+
+    }
 
     .table-oppettider {
         width: 30vw;
@@ -568,18 +669,58 @@ footer {
     .table-hundskotare {
         width: 30dvw;
     }
-
-
-    .kort {
-        width: 40vw;
+    .kort h3 {
+        font-size: 1.5rem;
+    }
+    .kort p {font-size: 1.3rem ;}
+    
+    .omdomen p {
+        font-size: 1.2rem;
+    }
+    .omdomen button {
+        font-size: 1rem;
+    }
+    .boka {
+        display: grid;
+        grid-template-columns: 1fr fit-content;
     }
 
-    .tjanster {
-        flex-direction: row;
-        gap: 2rem;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-
+    .boka-arti {
+        grid-column: 1;
+        padding-bottom: 2rem;
+    }
+    .bokade-arti {
+        grid-column: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        text-align: center;
+    }
+    .boka p {
+        font-size: 1.3rem;
+    }
+    .boka label {font-size:1.5rem ;}
+    .boka input {
+        padding: 0.2rem;
+        font-size: 0.8rem;
+    }
+    #bokning-btn, #avbokning-btn {
+        font-size: 1rem;
+    }
+    .boka h3 {
+        font-size: 1.5rem;
+    }
+    .bokade-item {
+        font-size: 1.3rem;
+    }
+    footer p, footer a {
+    font-size: 1.3rem;
+}
+    footer h3 {
+    font-size: 1.7rem;
+}
+    .kontakt-arti {
+        border: none;
     }
 
 }
