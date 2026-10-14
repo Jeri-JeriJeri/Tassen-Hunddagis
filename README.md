@@ -64,6 +64,9 @@ Exporterade arrayen (jsonRecensioner) och importerade den i app.js. När man kli
 ### jsonRecensioner
 Jag skapade variabeln i så att jag kan hoppa mellan array indexen. i = 0 så när man klickar första gången kommer deT första objektet skrivas ut på HTML dokumentet jsonRecensioner[0] och när man klickar igen blir det jsonRecensioner[1] då texten från den andra recensionen skrivs ut på HTML dokumentet
 
+### this. 
+Jag använde this.textContent för att bytta texten på knappen när man trycker den. För att få "this." att funka använde jag en vanlig funktion eftersom "this." funkar inte på arrow funktioner. "this." gör så att omdomeBtn läser sin egen textContent och ändrar den, det blir enklare att skriva så istället för omdomeBtn.textConent speciell om man skapar en större projekt.
+
 # Bokningsförfrågan 
 Bokningsförfrågan kommer vara en form. Javascript kommer hämta hundens namn och datumet och spara de i localStorage.
 
