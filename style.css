@@ -485,7 +485,7 @@ footer h3 {
     font-size: 2.5rem;
     }
     nav ul {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     }
 
     h1 {
@@ -494,7 +494,7 @@ footer h3 {
     }
 
     h2 {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
 
     }
     #over-text {
@@ -524,7 +524,7 @@ footer h3 {
         padding: 3rem 0;
     }
     .tid-datum {
-        font-size: 2.7rem;
+        font-size: 2.3rem;
         
     }
 
@@ -536,14 +536,14 @@ footer h3 {
 
     }
     caption {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
     th {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
         
     }
     td {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
         
     }
 
@@ -560,46 +560,53 @@ footer h3 {
     }
 
     .kort h3 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     .kort p {
-        font-size: 1.7rem;
+        font-size: 1.4rem;
         
     }
     .tjanster h2 {
         width: 100%;
     }
     .omdomen p {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
 }
     .omdomen button {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
     }
     .boka p {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
     }
     .boka h3 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     .boka label {
-        font-size: 1.9rem;
+        font-size: 1.6rem;
     }
     .boka input {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     
   
-    #bokning-btn, #avbokning-btn {
-    font-size: 1.9rem;
+    #bokning-btn {
+    font-size: 1.4rem;
+}
+#avbokning-btn {
+    font-size: 1.2rem;
+
 }
  .bokade-item {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
 }
  footer p, footer a {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
 }
 footer h3 {
-    font-size: 2.3rem;
+    font-size: 1.8rem;
+}
+footer h2 {
+    font-size: 2.2rem;
 }
 
 .article-container {
