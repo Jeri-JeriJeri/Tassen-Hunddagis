@@ -184,6 +184,7 @@ caption {
     font-weight: bold;
     font-size: 1.6rem;
     padding-bottom: 2px;
+    padding-top: 1rem;
 }
 
 td {
@@ -206,6 +207,7 @@ th {
 .table-oppettider {
     width: 50dvw;
     margin-bottom: 2rem;
+
 }
 
 .table-hundskotare {
@@ -449,7 +451,6 @@ footer h3 {
 .kontakt-text {
     margin: 0;
     text-align: center;
-    /* padding: 1rem; */
 }
 
 .article-container {
@@ -459,8 +460,6 @@ footer h3 {
     justify-content: space-evenly;
     margin-top: 1rem;
     text-align: center;
-    /* margin-left: 2rem; */
-  /*   gap: 1rem; */
 
 }
 
@@ -521,6 +520,8 @@ footer h3 {
 
     .open{
         background: #f8f9fb;
+        height: fit-content;
+        padding: 3rem 0;
     }
     .tid-datum {
         font-size: 2.7rem;
