@@ -84,7 +84,7 @@ function loadLocalStorage() {
         avBokaBtn.textContent = "Avboka"
 
         avBokaBtn.addEventListener("click", () => {
-            // Ta bort bokningen
+            
             bokningar = bokningar.filter((b, i) => i !== index)
 
             localStorage.setItem("bokningar", JSON.stringify(bokningar))
@@ -109,14 +109,8 @@ formBook.addEventListener("submit", (e) => {
     addLocalStorage();
     console.log(bokatDatum.value)
 })
-// RECENSIONER
-const recension = document.getElementById("recension-text")
-const recensionNamn = document.getElementById("recension-person")
-const recensionOmdome = document.getElementById("recension-rating")
 
-// Dropdown Menu
-
-// Recension fetcher
+// Recension
 import { jsonRecensioner } from "./recensioner.js";
 
 const omdomeBtn = document.getElementById("omdome-btn")
@@ -126,9 +120,10 @@ const recensionRating = document.getElementById("recension-rating")
 const recensionStars = document.getElementById("recension-stars")
 let i = 0;
 
-omdomeBtn.addEventListener("click", () => {
+omdomeBtn.addEventListener("click", function() {
+    this.textContent = "Nästa recension"
     recensionText.style.fontStyle = "italic"
-    recensionNamn.textContent = jsonRecensioner[i].namn;
+    recensionPerson.textContent = jsonRecensioner[i].namn;
     recensionText.textContent = jsonRecensioner[i].recensionen
     recensionRating.textContent = jsonRecensioner[i].rating
     recensionStars.textContent = jsonRecensioner[i].stars
