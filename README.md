@@ -1,9 +1,9 @@
 # Hunddagis Tassen
 
-## Utvecklare:
+### Utvecklare:
 Bojan (Jeri-JeriJeri)
 
-## Instruktioner:
+### Instruktioner:
 Starta index.html med live server
 
 # Idéen innan jag börjar koda
@@ -40,7 +40,7 @@ Hittade font på google fonts, kopierade deras <link> kod och klistrade in i <he
 # .start
 Jag använde position relative så att jag kan sätta position absolute på videon. Och position absoloute med hjälp av z-index hjälper mig sätta videon som bakgrund. Och för att få texten och rubriken att visas, körde jag z-index 1 på dem. Och sist object-fit: cover använde jag för att få den exakt bredd och lång som .start
 
-## header
+### header
 Jag behövde lägga till z-index: 2 till header eftersom den försvinner när jag skrollar ner på grund av z-indexen som är på videon. 
 
 # Open
@@ -61,28 +61,28 @@ Varje tjänst sitter i sitt egen article, men alla har samma klass. På mobil sk
 Jag skapade jsonRecensioner.js och skrev arrayen med objekterna inne eftersom det blir mycket text och det är lättare om man inte ser stora strängar i koden. 
 Exporterade arrayen (jsonRecensioner) och importerade den i app.js. När man klickar på knappen finns det 4 p element som skrivs över via DOM. 
 
-## jsonRecensioner
+### jsonRecensioner
 Jag skapade variabeln i så att jag kan hoppa mellan array indexen. i = 0 så när man klickar första gången kommer deT första objektet skrivas ut på HTML dokumentet jsonRecensioner[0] och när man klickar igen blir det jsonRecensioner[1] då texten från den andra recensionen skrivs ut på HTML dokumentet
 
 # Bokningsförfrågan 
 Bokningsförfrågan kommer vara en form. Javascript kommer hämta hundens namn och datumet och spara de i localStorage.
 
-## addLocalStorage:
+### addLocalStorage:
  Först hämtar datan från de 2 inputs. Sen sparas de i ett objekt (bokning) som har 2 properties för både namn och datumet.
 De läggs till arrayen bokningar via .push(). Efter det sparas arrayen till localStorage och använde jag JSON.stringify() så att man kan läsa det som sparades. Sedan körs loadLocalStorage() så att listan uppdateras i real-time. 
 
-## loadLocalStorage: 
+### loadLocalStorage: 
 Skapade varibeln sparadeBokningar som hämtar sparade items. If satsen kollar om nånting finns i variabeln (om du har sparat nånting förut). 
 Annars listan kommer vara tomt
 
-## forEach 
+### forEach 
 För varje "bokningar" item skapas en li element med value av hundensNamn och Datumet. Och sist läggs li elementet som barn till ul elementet
 Jag använde DOMContentLoaded och loadLocalStorage() på document.addEventListener för att visa items som är sparade i localStorage när sidan laddas. 
 
-## Form
+### Form
 Form har e.preventDefualt gör så att webbsidan laddas inte om när man trycker på knappen "Boka"
 
-## Ta bort knappen
+### Ta bort knappen
 li.remove och btn remove raderar själva boxen direkt när man trycker på avboka knappen, annars skulle man behöva refresha för att se dem borta.
 
 Knapp eventlistener: filterar bort de som har samma index. Så om en bokning för exempel har indexen 3: 3 !== 3 är = false; så den filteras bort och raderas. Sen sparas arrayen igen via localStorage.setItem efter bokningen har raderas
