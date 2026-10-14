@@ -673,6 +673,22 @@ footer h3 {
     .omdomen button {
         font-size: 1rem;
     }
+    .boka {
+        display: grid;
+        grid-template-columns: 1fr fit-content;
+    }
+
+    .boka-arti {
+        grid-column: 1;
+        padding-bottom: 2rem;
+    }
+    .bokade-arti {
+        grid-column: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        text-align: center;
+    }
     .boka p {
         font-size: 1.3rem;
     }
@@ -685,7 +701,7 @@ footer h3 {
         font-size: 1rem;
     }
     .boka h3 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
     .bokade-item {
         font-size: 1.3rem;
