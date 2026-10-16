@@ -56,7 +56,7 @@ If satsen för isOpenedOrClosed kör så här "Om dagen är från 1-5 (mån -> f
 För öppettider valde jag att skapa 2 tabeller. th elementen sitter till vänster medan td elementen sitter till höger
 
 # Tjänster
-Varje tjänst sitter i sitt egen article, men alla har samma klass. På mobil skärm sitter de i kolumn, men på större skärmar finns det 3 rader (2 tjänster per rad)
+Varje tjänst sitter i sin egen article, men alla har samma klass. På mobil skärm sitter de i kolumn, men på större skärmar finns det 3 rader (2 tjänster per rad)
 
 # Omdöme
 Jag skapade recensioner.js I filen skapade jag class Person med 4 constructors: namn, text, rating och stjärnor. Därefter skapade jag 3 nya personer via new Person() och varje constructor fick sin egen value. Sedan lade jag dem i en array (personArr) exporterade den och importerade i app.js. I app.js har jag varibel i = 0. När man klickar på knappen, array value med [i] index skrivs ut på HTML dokumentet och i ökar med + 1. För att loopa till början när arrayen tar slut har jag if satsen (i >= personArr.length) {i = 0;} 
@@ -68,14 +68,14 @@ Jag använde this. i constructor i class Person. this. gör att när man skapar 
 Också använde jag this.textContent för att bytta texten på knappen när man trycker den. För att få "this." att funka använde jag en vanlig funktion eftersom "this." funkar inte på samma sätt som arrow funktioner. "this." gör så att omdomeBtn läser sin egen textContent och ändrar den.
 
 # Bokningsförfrågan 
-Bokningsförfrågan kommer vara en form. Javascript kommer hämta hundens namn och datumet och spara de i localStorage.
+Bokningsförfrågan är en form. Javascript hämtar hundens namn och datumet och sparar de i localStorage.
 
 ### addLocalStorage:
- Först hämtar datan från de 2 inputs. Sen sparas de i ett objekt (bokning) som har 2 properties för både namn och datumet.
+Först hämtar datan från de 2 inputs. Sen sparas de i ett objekt (bokning) som har 2 properties för både namn och datumet.
 De läggs till arrayen bokningar via .push(). Efter det sparas arrayen till localStorage och använde jag JSON.stringify() så att man kan läsa det som sparades. Sedan körs loadLocalStorage() så att listan uppdateras i real-time. 
 
 ### loadLocalStorage: 
-Skapade varibeln sparadeBokningar som hämtar sparade items. If satsen kollar om nånting finns i variabeln (om du har sparat nånting förut). 
+Skapade varibel sparadeBokningar som hämtar sparade items. If satsen kollar om nånting finns i variabeln (om du har sparat nånting förut). 
 Annars listan kommer vara tomt
 
 ### forEach 
