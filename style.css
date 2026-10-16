@@ -116,22 +116,33 @@ section {
     position: relative;
     z-index: 1;
     color: #F6f4ef;
-
 }
 
 #over-text {
     margin: 0 1.6rem;
-    font-size: 1.4rem;
+    font-size: 2rem;
+    animation: rubrik 1s;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+    opacity: 0;
 }
 
 h1 {
     margin: 0 1rem;
-    font-size: 2.2rem;
+    font-size: 3rem;
+    animation: rubrik 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
 }
 
 #under-text {
     margin: 0 2.2rem;
-    font-size: 1.4rem;
+    font-size: 2rem;
+    animation: rubrik 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
 }
 h2 {
     font-size: 1.8rem;
@@ -479,9 +490,35 @@ footer h3 {
     margin-right: 1rem;
 }
 
+
+ /* Animation */
+@keyframes rubrik {
+    0% {
+        left: -100px;
+        opacity: 0;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
 /* Media Queries */
 @media (min-width: 768px) {
-    nav p {
+  
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "start start start"
+            "open open opettider"
+            "tjanster tjanster tjanster"
+            "omdome omdome omdome"
+            "boka boka boka"
+        ;
+    }
+      nav p {
     font-size: 2.5rem;
     }
     nav ul {
@@ -497,27 +534,10 @@ footer h3 {
         font-size: 2.3rem;
 
     }
-    #over-text {
+    #over-text, #under-text {
 
         font-size: 2.2rem;
     }
-    #under-text {
-        font-size: 2.2rem;
-
-    }
-
-    main {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas:
-            "start start start"
-            "open open opettider"
-            "tjanster tjanster tjanster"
-            "omdome omdome omdome"
-            "boka boka boka"
-        ;
-    }
-
     .open{
         background: #f8f9fb;
         height: fit-content;
