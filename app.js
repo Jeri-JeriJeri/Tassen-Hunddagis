@@ -126,7 +126,8 @@ let i = 0;
 omdomeBtn.addEventListener("click", function() {
     this.textContent = "Nästa recension"
     recensionText.style.fontStyle = "italic"
-    recensionNamn.textContent = personArr[i].namn;
+    
+    recensionPerson.textContent = personArr[i].namn;
     recensionText.textContent = personArr[i].text
     recensionRating.textContent = personArr[i].rating
     recensionStars.textContent = personArr[i].stjarnor
