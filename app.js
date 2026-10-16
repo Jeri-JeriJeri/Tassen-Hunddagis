@@ -117,7 +117,7 @@ const recensionOmdome = document.getElementById("recension-rating")
 // Dropdown Menu
 
 // Recension fetcher
-import { jsonRecensioner } from "./recensioner.js";
+import { personArr } from "./recensioner.js";
 
 const omdomeBtn = document.getElementById("omdome-btn")
 const recensionText = document.getElementById("recension-text")
@@ -127,24 +127,18 @@ const recensionStars = document.getElementById("recension-stars")
 let i = 0;
 
 omdomeBtn.addEventListener("click", () => {
+     
+    recensionNamn.textContent = personArr[i].namn;
+    recensionText.textContent = personArr[i].text
+    recensionRating.textContent = personArr[i].rating
+    recensionStars.textContent = personArr[i].stjarnor
+    
     recensionText.style.fontStyle = "italic"
-    recensionNamn.textContent = jsonRecensioner[i].namn;
-    recensionText.textContent = jsonRecensioner[i].recensionen
-    recensionRating.textContent = jsonRecensioner[i].rating
-    recensionStars.textContent = jsonRecensioner[i].stars
 
     i++;
 
-    if (i >= jsonRecensioner.length) {
+     if (i >= personArr.length) {
         i = 0;
-    }
+    } 
 })
-class Person {
-    constructor(name, age, text) {
-        this.name = name;
-        this.age = age;
-        this.text = text;
-    }
-} 
-const pate = new Person("pate", 20, "hElo");
-console.log(patee)
+
