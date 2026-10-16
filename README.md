@@ -33,13 +33,13 @@ Header kommer ha position sticky. Så när man skrollar ner, knapparna finns all
 Sidan kommer vara mobile-first och sen kommer jag lägga till media queries för att få den se bättre ut för en tablet och dator 
 
 # Början av kodering
-Använder grid och grid-area på main för att lättare sätta varsin sektion i sin egen plats 
+Använder grid och grid-area på main för att lättare sätta varsin sektion i sin egen plats.
 
 # body
-Hittade font på google fonts, kopierade deras <link> kod och klistrade in i <header> och sen bytte hela dokumentets font-family till denna font (Oswald)
+Hittade font på google fonts, kopierade deras link kod och klistrade in i header och sen bytte hela dokumentets font-family till denna font (Oswald)
 
 # .start
-Jag använde position relative så att jag kan sätta position absolute på videon. Och position absoloute med hjälp av z-index hjälper mig sätta videon som bakgrund. Och för att få texten och rubriken att visas, körde jag z-index 1 på dem. Och sist object-fit: cover använde jag för att få den exakt bredd och lång som .start
+Jag använde position relative så att jag kan sätta position absolute på videon. Och position absoloute med hjälp av z-index hjälper mig sätta videon som bakgrund. Och för att få texten och rubriken att visas, körde jag z-index 1 på dem. Och sist object-fit: cover använde jag för att få den exakt bredd och lång som .start sektionen
 
 ### header
 Jag behövde lägga till z-index: 2 till header eftersom den försvinner när jag skrollar ner på grund av z-indexen som är på videon. 
