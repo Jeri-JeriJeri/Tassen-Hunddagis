@@ -1,72 +1,103 @@
-## Hunddagis Tassen
+# Hunddagis Tassen
 
+### Utvecklare:
+Bojan (Jeri-JeriJeri)
+
+### Instruktioner:
+Starta index.html med live server
+
+# Svåraste del
+Svåraste delen var "ta bort" knappen i localStorage. Efter flera timmar av googling och youtube tutorials fick jag den att funka med .filter.  
+
+# Idéen innan jag börjar koda
 Sidan kommer ha 5 sektioner
-- Tjänster
 - Öppettider
+- Tjänster
 - Omdömen
 - Boka
-- Kontakt
+- Kontakt 
 
 Tjänster kommer innebär
 - Hunddagis heldag
 - Hunddagis halvdag
 - Pensionat ( hunden får sova över)
 - Klippkort
-- Hämting och lämning (inte säkert kanske kommer ändra den)
+- Hämting och lämning
+  
+Jag kommer använda anchor länkar för att hoppa till sektionerna istället för att skapa ny webbsida per sektion.
 
-De kommer sitta i denna ordning. Jag kommer använda ankor länkar för att hoppa till sektionerna istället för att skapa ny webbsidan per sektion.
-
-Jag kör med Spår A och ha Omdöme sektion. Mitt tanke är att ha en JSON fil där personens namn och text skrivs ut. Kanske lägga till rating t.ex 4.5/5 osv
+Jag kör med Spår A och ha Omdöme sektion. Mitt tanke är att ha en .js fil där jag kan exportera personens namn och text. Kanske lägga till rating t.ex 4.5/5 osv
 
 Nav kommer vara display flex eftersom det blir lättare och enklare att få listan sitta på höger sidan medans home knappen sitter på vänster sidan
 
 Header kommer ha position sticky. Så när man skrollar ner, knapparna finns alltid.
 
-Sidan kommer vara mobile-first och sen kommer jag lägga till media queries för att få den se bättre ut för en tablet och dator (stor skärm)
+Sidan kommer vara mobile-first och sen kommer jag lägga till media queries för att få den se bättre ut för en tablet och dator 
+
 # Början av kodering
-Använder clamp(1rem, 2rem, 2.5rem) på nav p för responsivitet. 1rem blir minsta storleken "hem" knappen kan vara
+Använder grid och grid-area på main för att lättare sätta varsin sektion i sin egen plats 
 
-Använder grid och grid-area på main för att lättare sätta varsin sektion i sin egen plats
-
-Använder div för att sätta tjänster i boxes 
-
-I funktionen getTime variablerna som hämtat timmar, minuter och sekunder måste vara en string för att få padStart att funka, så jag läggde dem i en String().
-padStart(2, "0") gör så att om det finns mindre tecken än 2 -> lägga till "0"
-Samma för getDate
-
-If satsen för isOpenedOrClosed kör så här "Om dagen är från 1-5 och tiden är från 7 till 18" -> Skriv över #open-close till open
-"Om dagen är 6 och tiden är mellan 9 och 14 skriv över #open-close till open" Annars står det Ständgt. Ingen if sats för söndag eftersom tassen är ständgt 
-
-# Omdöme
-Jag skapade recensioner.js för att arrayen med objekterna inne eftersom det blir mycket text och det är lättare om man ser inte det i koden. Exporterade den och importerade i app.js
-# Bokningsförfrågan 
-Bokningsförfrågan kommer vara en form. Javascript kommer hämta hundens namn och datumet och spara den via localStorage.
-
-## addLocalStorage:
- Först hämtar datan från de 2 inputs. Sen sparas de i ett objekt (bokning) och de läggs till arrayen bokningar via .push(). Efter det sparas arrayen till localStorage och använde jag JSON.stringify() så att man kan läsa det som sparades. Sedan körs loadLocalStorage() så att listan uppdateras i real-time. 
-
-## loadLocalStorage: 
-Skapade varibeln sparadeBokningar som hämtar sparade items. If satsen kör om nånting finns i variabeln. Om ja skickas localStorage items som ett objekt
-
-Annars listan kommer vara tomt
-
-## forEach 
-För varje bokningar item skapas en li element med value av hundensNamn och Datumet. Och sist läggs li elementet som barn till ul elementet
-
-
-Jag använde DOMContentLoaded och loadLocalStorage() på document.addEventListener för att visa items som är sparade i localStorage när sidan laddas. 
-
-## Ta bort knappen
-li.remove och btn remove raderar själva boxen direkt när man trycker på avboka knappen, annars skulle man behöva refresha för att se dem borta.
-Knapp eventlistener: filterar bort de som har samma index. Så om en bokning för exempel har indexen 3. 3 !== 3 är = false; så den filteras bort och raderas. Sen sparas arrayen igen via localStorage.setItem efter bokningen har raderas
+# body
+Hittade font på google fonts, kopierade deras <link> kod och klistrade in i <header> och sen bytte hela dokumentets font-family till denna font (Oswald)
 
 # .start
-Jag använde position relative så att jag kan sätta position absolute på videon. Och position absoloute med hjälp av z-index hjälper mig sätta videon som bakgrund. Och för att få texten och rubriken att visas, körde jag z-index 1 på dem. Och sist object-fit: cover; för att få den exakt bredd och lång som .start
+Jag använde position relative så att jag kan sätta position absolute på videon. Och position absoloute med hjälp av z-index hjälper mig sätta videon som bakgrund. Och för att få texten och rubriken att visas, körde jag z-index 1 på dem. Och sist object-fit: cover använde jag för att få den exakt bredd och lång som .start
 
-## Recensioner
-Recensionerna sitter i ett array som innehåller objekt.
-Jag använde event listener som kollar på variabeln i. Varje gång man trycker, i.värden skrivs ut i HTML och sen kör +1 i arrayen för att hoppa till nästa person. Och det finns 3 i.värde som är namn, recension och rating
-### AI använding:
-Jag använde ai för object-cover
+### header
+Jag behövde lägga till z-index: 2 till header eftersom den försvinner när jag skrollar ner på grund av z-indexen som är på videon. 
 
+# Open
+I funktionen getTime variablerna som hämtar timmar, minuter och sekunder måste vara en string för att få padStart att funka, så jag läggde dem i en String().
+padStart(2, "0") gör så att om det finns mindre tecken än 2 -> lägga till "0" (Om klockan är mindre än 10).
+Samma för getDate
+
+If satsen för isOpenedOrClosed kör så här "Om dagen är från 1-5 (mån -> fre) och tiden är från 7 till 18" -> Skriv över #open-close till open
+"Om dagen är 6 (lör) och tiden är mellan 9 och 14 skriv över #open-close till open" Annars står det Ständgt. Ingen if sats för söndag eftersom tassen är stängd
+
+# Öppettider
+För öppettider valde jag att skapa 2 tabeller. th elementen sitter till vänster medan td elementen sitter till höger
+
+# Tjänster
+Varje tjänst sitter i sitt egen article, men alla har samma klass. På mobil skärm sitter de i kolumn, men på större skärmar finns det 3 rader (2 tjänster per rad)
+
+# Omdöme
+Jag skapade recensioner.js I filen skapade jag class Person med 4 constructors: namn, text, rating och stjärnor. Därefter skapade jag 3 nya personer via new Person() och varje constructor fick sin egen value. Sedan lade jag dem i en array (personArr) exporterade den och importerade i app.js. I app.js har jag varibel i = 0. När man klickar på knappen, array value med [i] index skrivs ut på HTML dokumentet och i ökar med + 1. För att loopa till början när arrayen tar slut har jag if satsen (i >= personArr.length) {i = 0;} 
+sionen skrivs ut på HTML dokumentet
+
+### this. 
+Jag använde this. i constructor i class Person. this. gör att när man skapar en ny person, indexen och värden kommer sätts in automatisk i rätt ställe. istället för att skriva Person.namn = "Anna" kan jag skriva bara new Person("Anna")
+
+Också använde jag this.textContent för att bytta texten på knappen när man trycker den. För att få "this." att funka använde jag en vanlig funktion eftersom "this." funkar inte på arrow funktioner. "this." gör så att omdomeBtn läser sin egen textContent och ändrar den.
+
+# Bokningsförfrågan 
+Bokningsförfrågan kommer vara en form. Javascript kommer hämta hundens namn och datumet och spara de i localStorage.
+
+### addLocalStorage:
+ Först hämtar datan från de 2 inputs. Sen sparas de i ett objekt (bokning) som har 2 properties för både namn och datumet.
+De läggs till arrayen bokningar via .push(). Efter det sparas arrayen till localStorage och använde jag JSON.stringify() så att man kan läsa det som sparades. Sedan körs loadLocalStorage() så att listan uppdateras i real-time. 
+
+### loadLocalStorage: 
+Skapade varibeln sparadeBokningar som hämtar sparade items. If satsen kollar om nånting finns i variabeln (om du har sparat nånting förut). 
+Annars listan kommer vara tomt
+
+### forEach 
+För varje "bokningar" item skapas en li element med value av hundensNamn och Datumet. Och sist läggs li elementet som barn till ul elementet
+Jag använde DOMContentLoaded och loadLocalStorage() på document.addEventListener för att visa items som är sparade i localStorage när sidan laddas. 
+
+### Form
+Form har e.preventDefualt gör så att webbsidan laddas inte om när man trycker på knappen "Boka"
+
+### Ta bort knappen
+li.remove och btn remove raderar själva boxen direkt när man trycker på avboka knappen, annars skulle man behöva refresha för att se dem borta.
+
+Knapp eventlistener: filterar bort de som har samma index. Så om en bokning för exempel har indexen 3: 3 !== 3 är = false; så den filteras bort och raderas. Sen sparas arrayen igen via localStorage.setItem efter bokningen har raderas
+
+# Footer
+Vanlig grid. Sektionen kontakt innebär ett h2 element och div som är flexbox och delar 3 articles med space-evenly. E-post länken öppnar mail appen direkt eftersom jag använde href="mailto:"
+
+# media queries
+Skapade media queries för både tablet skärm och dator skärm
+
+# AI använding:
+Jag använde ai för object-cover. Jag kunde inte få utseenden som jag ville utan att använda video, så frågade jag hur kan jag ha <video> som ett bakgrund. 
 Också får att generera namn, recension och omdöme på omdöme sektionen. Bara texten

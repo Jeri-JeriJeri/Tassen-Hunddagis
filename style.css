@@ -462,6 +462,7 @@ footer h3 {
 .kontakt-text {
     margin: 0;
     text-align: center;
+    padding: 0 0.5rem;
 }
 
 .article-container {
