@@ -110,8 +110,10 @@ formBook.addEventListener("submit", (e) => {
     console.log(bokatDatum.value)
 })
 
+
+
 // Recension
-import { jsonRecensioner } from "./recensioner.js";
+import { personArr } from "./recensioner.js";
 
 const omdomeBtn = document.getElementById("omdome-btn")
 const recensionText = document.getElementById("recension-text")
@@ -120,17 +122,19 @@ const recensionRating = document.getElementById("recension-rating")
 const recensionStars = document.getElementById("recension-stars")
 let i = 0;
 
+
 omdomeBtn.addEventListener("click", function() {
     this.textContent = "Nästa recension"
     recensionText.style.fontStyle = "italic"
-    recensionPerson.textContent = jsonRecensioner[i].namn;
-    recensionText.textContent = jsonRecensioner[i].recensionen
-    recensionRating.textContent = jsonRecensioner[i].rating
-    recensionStars.textContent = jsonRecensioner[i].stars
+    recensionNamn.textContent = personArr[i].namn;
+    recensionText.textContent = personArr[i].text
+    recensionRating.textContent = personArr[i].rating
+    recensionStars.textContent = personArr[i].stjarnor
 
     i++;
 
-    if (i >= jsonRecensioner.length) {
+     if (i >= personArr.length) {
         i = 0;
-    }
+    } 
 })
+
