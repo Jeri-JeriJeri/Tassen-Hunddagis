@@ -119,7 +119,7 @@ section {
 }
 
 #over-text {
-    margin: 0 1.6rem;
+    margin: 0 2rem;
     font-size: 2rem;
     animation: rubrik 1s;
     animation-delay: 0.8s;
@@ -137,7 +137,7 @@ h1 {
 }
 
 #under-text {
-    margin: 0 2.2rem;
+    margin: 0 2rem;
     font-size: 2rem;
     animation: rubrik 1s;
     animation-delay: 1s;
