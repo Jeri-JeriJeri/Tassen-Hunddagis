@@ -6,8 +6,6 @@ Bojan (Jeri-JeriJeri)
 ### Instruktioner:
 Starta index.html med live server
 
-# Svåraste del
-Svåraste delen var "ta bort" knappen i localStorage. Efter flera timmar av googling och youtube tutorials fick jag den att funka med .filter.  
 
 # Idéen innan jag börjar koda
 Sidan kommer ha 5 sektioner
@@ -67,7 +65,7 @@ sionen skrivs ut på HTML dokumentet
 ### this. 
 Jag använde this. i constructor i class Person. this. gör att när man skapar en ny person, indexen och värden kommer sätts in automatisk i rätt ställe. istället för att skriva Person.namn = "Anna" kan jag skriva bara new Person("Anna")
 
-Också använde jag this.textContent för att bytta texten på knappen när man trycker den. För att få "this." att funka använde jag en vanlig funktion eftersom "this." funkar inte på arrow funktioner. "this." gör så att omdomeBtn läser sin egen textContent och ändrar den.
+Också använde jag this.textContent för att bytta texten på knappen när man trycker den. För att få "this." att funka använde jag en vanlig funktion eftersom "this." funkar inte på samma sätt som arrow funktioner. "this." gör så att omdomeBtn läser sin egen textContent och ändrar den.
 
 # Bokningsförfrågan 
 Bokningsförfrågan kommer vara en form. Javascript kommer hämta hundens namn och datumet och spara de i localStorage.
@@ -96,7 +94,10 @@ Knapp eventlistener: filterar bort de som har samma index. Så om en bokning fö
 Vanlig grid. Sektionen kontakt innebär ett h2 element och div som är flexbox och delar 3 articles med space-evenly. E-post länken öppnar mail appen direkt eftersom jag använde href="mailto:"
 
 # media queries
-Skapade media queries för både tablet skärm och dator skärm
+Skapade media queries för både tablet skärm och dator skärm så webbsidan är responsiv
+
+# Svåraste del
+Svåraste delen var "ta bort" knappen i localStorage. Efter flera timmar av googling och youtube tutorials fick jag den att funka med .filter.  
 
 # AI använding:
 Jag använde ai för object-cover. Jag kunde inte få utseenden som jag ville utan att använda video, så frågade jag hur kan jag ha <video> som ett bakgrund. 
