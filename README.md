@@ -6,6 +6,9 @@ Bojan (Jeri-JeriJeri)
 ### Instruktioner:
 Starta index.html med live server
 
+# Svåraste del
+Svåraste delen var "ta bort" knappen i localStorage. Efter flera timmar av googling och youtube tutorials fick jag den att funka med .filter.  
+
 # Idéen innan jag börjar koda
 Sidan kommer ha 5 sektioner
 - Öppettider
@@ -58,14 +61,13 @@ För öppettider valde jag att skapa 2 tabeller. th elementen sitter till vänst
 Varje tjänst sitter i sitt egen article, men alla har samma klass. På mobil skärm sitter de i kolumn, men på större skärmar finns det 3 rader (2 tjänster per rad)
 
 # Omdöme
-Jag skapade jsonRecensioner.js och skrev arrayen med objekterna inne eftersom det blir mycket text och det är lättare om man inte ser stora strängar i koden. 
-Exporterade arrayen (jsonRecensioner) och importerade den i app.js. När man klickar på knappen finns det 4 p element som skrivs över via DOM. 
-
-### jsonRecensioner
-Jag skapade variabeln i så att jag kan hoppa mellan array indexen. i = 0 så när man klickar första gången kommer deT första objektet skrivas ut på HTML dokumentet jsonRecensioner[0] och när man klickar igen blir det jsonRecensioner[1] då texten från den andra recensionen skrivs ut på HTML dokumentet
+Jag skapade recensioner.js I filen skapade jag class Person med 4 constructors: namn, text, rating och stjärnor. Därefter skapade jag 3 nya personer via new Person() och varje constructor fick sin egen value. Sedan lade jag dem i en array (personArr) exporterade den och importerade i app.js. I app.js har jag varibel i = 0. När man klickar på knappen, array value med [i] index skrivs ut på HTML dokumentet och i ökar med + 1. För att loopa till början när arrayen tar slut har jag if satsen (i >= personArr.length) {i = 0;} 
+sionen skrivs ut på HTML dokumentet
 
 ### this. 
-Jag använde this.textContent för att bytta texten på knappen när man trycker den. För att få "this." att funka använde jag en vanlig funktion eftersom "this." funkar inte på arrow funktioner. "this." gör så att omdomeBtn läser sin egen textContent och ändrar den, det blir enklare att skriva så istället för omdomeBtn.textConent speciell om man skapar en större projekt.
+Jag använde this. i constructor i class Person. this. gör att när man skapar en ny person, indexen och värden kommer sätts in automatisk i rätt ställe. istället för att skriva Person.namn = "Anna" kan jag skriva bara new Person("Anna")
+
+Också använde jag this.textContent för att bytta texten på knappen när man trycker den. För att få "this." att funka använde jag en vanlig funktion eftersom "this." funkar inte på arrow funktioner. "this." gör så att omdomeBtn läser sin egen textContent och ändrar den.
 
 # Bokningsförfrågan 
 Bokningsförfrågan kommer vara en form. Javascript kommer hämta hundens namn och datumet och spara de i localStorage.
