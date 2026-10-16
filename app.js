@@ -139,3 +139,12 @@ omdomeBtn.addEventListener("click", () => {
         i = 0;
     }
 })
+class Person {
+    constructor(name, age, text) {
+        this.name = name;
+        this.age = age;
+        this.text = text;
+    }
+} 
+const pate = new Person("pate", 20, "hElo");
+console.log(patee)

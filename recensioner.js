@@ -15,3 +15,13 @@ export const jsonRecensioner = [
     "rating": "8/10"
   }
 ]
+class Person {
+    constructor(namn, alder, text) {
+        this.namn = namn
+        this.alder = alder
+        this.text = text
+    }
+}
+const Anna = new Person()
+const Erik = new Person()
+const Kim = new Person()
