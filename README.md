@@ -78,6 +78,13 @@ De läggs till arrayen bokningar via .push(). Efter det sparas arrayen till loca
 Skapade varibel sparadeBokningar som hämtar sparade items. If satsen kollar om nånting finns i variabeln (om du har sparat nånting förut). 
 Annars listan kommer vara tomt
 
+#### If satsen
+ if (!(bokningar.length === 0)) kollar om bokningar är INTE 0. Så om arrayen är inte tom, kommer texten ändras till "Dina bokningar:" Annars står det att du har inte bokat nånting. 
+ 
+I avbokokningsknappens eventListener finns samma if sats. Varje gång man avbokar, kontrollerar programmet om arrayen bokningar är tom. Om den är tom kommer texten ändras tillbaka till "Det finns inga bokningar att visa".
+ 
+Om jag hade inte lagt if satsen i knappens eventListener skulle sidan behöva refreshas för att visa att du har inga bokningar efter du har avbokat alla bokningar
+
 ### forEach 
 För varje "bokningar" item skapas en li element med value av hundensNamn och Datumet. Och sist läggs li elementet som barn till ul elementet
 Jag använde DOMContentLoaded och loadLocalStorage() på document.addEventListener för att visa items som är sparade i localStorage när sidan laddas. 
