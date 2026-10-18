@@ -79,9 +79,9 @@ Skapade varibel sparadeBokningar som hämtar sparade items. If satsen kollar om 
 Annars listan kommer vara tomt
 
 #### If satsen
- if (!(bokningar.length === 0)) kollar om bokningar är INTE 0. Så om arrayen är inte tom, kommer texten ändras till "Dina bokningar:" Annars står det att du har inte bokat nånting. 
+ if (!(bokningar.length === 0)) kollar om bokningar är INTE 0. Så om arrayen är inte tom, kommer texten ändras till "Dina bokningar:" och den flyttar till flex-start. Annars står det att du har inte bokat nånting. 
  
-I avbokokningsknappens eventListener finns samma if sats. Varje gång man avbokar, kontrollerar programmet om arrayen bokningar är tom. Om den är tom kommer texten ändras tillbaka till "Det finns inga bokningar att visa".
+I avbokokningsknappens eventListener finns samma if sats. Varje gång man avbokar, kontrollerar programmet om arrayen bokningar är tom. Om den är tom kommer texten ändras tillbaka till "Det finns inga bokningar att visa" och flyttas tillbaka till mitten.
  
 Om jag hade inte lagt if satsen i knappens eventListener skulle sidan behöva refreshas för att visa att du har inga bokningar efter du har avbokat alla bokningar
 
