@@ -49,7 +49,7 @@ const formBook = document.getElementById("bokning-form");
 const listContainer = document.getElementById("bokning-sparade")
 const hundNamn = document.getElementById("bokat-namn")
 const bokatDatum = document.getElementById("bokat-datum")
-
+const dinaBokningar = document.getElementById("dina-bokningar")
 let bokningar = [];
 
 function addLocalStorage() {
@@ -73,6 +73,11 @@ function loadLocalStorage() {
     if (sparadeBokningar) {
         bokningar = JSON.parse(sparadeBokningar)
     }
+    
+    
+    if (!(bokningar.length === 0)) {
+        dinaBokningar.textContent = "Dina Bokningar:"
+    }  
 
     listContainer.innerHTML = "";
     bokningar.forEach((bokning, index) => {
@@ -91,7 +96,10 @@ function loadLocalStorage() {
 
             li.remove();
             avBokaBtn.remove();
-
+            if (bokningar.length === 0) {
+                dinaBokningar.textContent = "Det finns inga bokningar att visa."
+            }
+            
 
         })
         listContainer.appendChild(li)
@@ -99,6 +107,7 @@ function loadLocalStorage() {
     })
 
 }
+
 
 document.addEventListener("DOMContentLoaded", (e) => {
     loadLocalStorage();
