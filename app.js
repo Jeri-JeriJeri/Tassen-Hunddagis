@@ -116,7 +116,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
 formBook.addEventListener("submit", (e) => {
     e.preventDefault();
     addLocalStorage();
-    console.log(bokatDatum.value)
 })
 
 
