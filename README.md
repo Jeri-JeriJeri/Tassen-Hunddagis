@@ -6,7 +6,6 @@ Bojan (Jeri-JeriJeri)
 ### Instruktioner:
 Starta index.html med live server
 
-
 # Idéen innan jag börjar koda
 Sidan kommer ha 5 sektioner
 - Öppettider
@@ -107,5 +106,5 @@ Skapade media queries för både tablet skärm och dator skärm så webbsidan ä
 Svåraste delen var "ta bort" knappen i localStorage. Efter flera timmar av googling och youtube tutorials fick jag den att funka med .filter.  
 
 # AI använding:
-Jag använde ai för object-cover. Jag kunde inte få utseenden som jag ville utan att använda video, så frågade jag hur kan jag ha <video> som ett bakgrund. 
+Jag använde ai för object-cover. Jag kunde inte få utseenden som jag ville utan att använda video, så frågade jag hur kan jag ha video som ett bakgrund. 
 Också får att generera namn, recension och omdöme på omdöme sektionen. Bara texten
